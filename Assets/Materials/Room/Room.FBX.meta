@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: fd276544827365840a87ca87f0715c4f
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bed_Blanketedge
+    100002: Bed_matt
+    100004: Bed_pillow
+    100006: Bed_pillow2
+    100008: Bed_railingF
+    100010: Camera001
+    100012: Candle
+    100014: Ch_carcas
+    100016: Ch_carcas001
+    100018: Ch_pillow
+    100020: Ch_pillow001
+    100022: Ch_seat
+    100024: Ch_seat001
+    100026: Chair
+    100028: Chair001
+    100030: Chair_Buttons
+    100032: Chair_Buttons001
+    100034: Chest
+    100036: Couch
+    100038: Door001
+    100040: DoorKnob
+    100042: Doorway
+    100044: Dryer
+    100046: Dummy001
+    100048: Lamp
+    100050: Lamp001
+    100052: Lamp002
+    100054: NoteBoard
+    100056: Picture Frame1
+    100058: //RootNode
+    100060: Room
+    100062: Shelf
+    100064: Table
+    100066: Vase
+    100068: Window001
+    100070: Window002
+    100072: Books1
+    100074: Pictureframe002
+    100076: Pictureframe003
+    100078: Pictureframe1
+    100080: Pictureframe004
+    100082: Switch
+    100084: Object001
+    100086: Lamp003
+    100088: Pictureframe005
+    100090: Tree
+    100092: Box001
+    100094: Bip001
+    100096: Bip001 Footsteps
+    100098: Bip002
+    100100: Bip002 Footsteps
+    100102: Bip002 Head
+    100104: Bip002 HeadNub
+    100106: Bip002 L Calf
+    100108: Bip002 L Clavicle
+    100110: Bip002 L Finger0
+    100112: Bip002 L Finger0Nub
+    100114: Bip002 L Foot
+    100116: Bip002 L Forearm
+    100118: Bip002 L Hand
+    100120: Bip002 L Thigh
+    100122: Bip002 L Toe0
+    100124: Bip002 L Toe01
+    100126: Bip002 L Toe02
+    100128: Bip002 L Toe0Nub
+    100130: Bip002 L UpperArm
+    100132: Bip002 Neck
+    100134: Bip002 Pelvis
+    100136: Bip002 R Calf
+    100138: Bip002 R Clavicle
+    100140: Bip002 R Finger0
+    100142: Bip002 R Finger0Nub
+    100144: Bip002 R Foot
+    100146: Bip002 R Forearm
+    100148: Bip002 R Hand
+    100150: Bip002 R Thigh
+    100152: Bip002 R Toe0
+    100154: Bip002 R Toe01
+    100156: Bip002 R Toe02
+    100158: Bip002 R Toe0Nub
+    100160: Bip002 R UpperArm
+    100162: Bip002 Spine
+    100164: Bip002 Spine1
+    100166: Bip002 Spine2
+    100168: Bip002 Spine3
+    100170: Cup
+    100172: Cup001
+    100174: Dummy002
+    100176: Mac
+    100178: Mouse
+    100180: Notebook
+    100182: Socket+cable
+    100184: Stool
+    100186: Table 1
+    100188: Table2Leg
+    100190: Table2Leg001
+    100192: Table2Leg002
+    100194: Table2Leg003
+    100196: TrashCan
+    100198: Mac Keyboard
+    100200: Table2Leg004
+    100202: Journal
+    100204: Box002
+    100206: CameraStand
+    100208: Bottle
+    100210: Couch001
+    100212: Couch_Blanket
+    100214: Couch_Pillowsww
+    100216: NewsPaper
+    100218: Vase 1
+    100220: Book
+    100222: Book001
+    100224: Book002
+    100226: Book003
+    100228: Book004
+    100230: Book005
+    100232: Book006
+    100234: Book007
+    100236: Bottle_of_Wine
+    100238: Elephant statue
+    100240: Elephant statue001
+    100242: Wineglass
+    100244: Wineglass001
+    100246: Bed Dummy
+    100248: Dryer 2
+    100250: Plane001
+    100252: SmallTable
+    100254: SmallTable001
+    100256: Plane002
+    100258: Shadows
+    100260: Rug
+    100262: Shadow
+    100264: Shadow001
+    100266: Shadow002
+    100268: Shadow003
+    100270: Sofa
+    100272: Camera002
+    100274: Camera002.Target
+    100276: F_Camera
+    100278: F_Film
+    100280: F_Frame
+    100282: F_Lense
+    100284: F_Table
+    100286: F_Tree
+    100288: Front
+    400000: Bed_Blanketedge
+    400002: Bed_matt
+    400004: Bed_pillow
+    400006: Bed_pillow2
+    400008: Bed_railingF
+    400010: Camera001
+    400012: Candle
+    400014: Ch_carcas
+    400016: Ch_carcas001
+    400018: Ch_pillow
+    400020: Ch_pillow001
+    400022: Ch_seat
+    400024: Ch_seat001
+    400026: Chair
+    400028: Chair001
+    400030: Chair_Buttons
+    400032: Chair_Buttons001
+    400034: Chest
+    400036: Couch
+    400038: Door001
+    400040: DoorKnob
+    400042: Doorway
+    400044: Dryer
+    400046: Dummy001
+    400048: Lamp
+    400050: Lamp001
+    400052: Lamp002
+    400054: NoteBoard
+    400056: Picture Frame1
+    400058: Room
+    400060: //RootNode
+    400062: Shelf
+    400064: Table
+    400066: Vase
+    400068: Window001
+    400070: Window002
+    400072: Books1
+    400074: Pictureframe002
+    400076: Pictureframe003
+    400078: Pictureframe1
+    400080: Pictureframe004
+    400082: Switch
+    400084: Object001
+    400086: Lamp003
+    400088: Pictureframe005
+    400090: Tree
+    400092: Box001
+    400094: Bip001
+    400096: Bip001 Footsteps
+    400098: Bip002
+    400100: Bip002 Footsteps
+    400102: Bip002 Head
+    400104: Bip002 HeadNub
+    400106: Bip002 L Calf
+    400108: Bip002 L Clavicle
+    400110: Bip002 L Finger0
+    400112: Bip002 L Finger0Nub
+    400114: Bip002 L Foot
+    400116: Bip002 L Forearm
+    400118: Bip002 L Hand
+    400120: Bip002 L Thigh
+    400122: Bip002 L Toe0
+    400124: Bip002 L Toe01
+    400126: Bip002 L Toe02
+    400128: Bip002 L Toe0Nub
+    400130: Bip002 L UpperArm
+    400132: Bip002 Neck
+    400134: Bip002 Pelvis
+    400136: Bip002 R Calf
+    400138: Bip002 R Clavicle
+    400140: Bip002 R Finger0
+    400142: Bip002 R Finger0Nub
+    400144: Bip002 R Foot
+    400146: Bip002 R Forearm
+    400148: Bip002 R Hand
+    400150: Bip002 R Thigh
+    400152: Bip002 R Toe0
+    400154: Bip002 R Toe01
+    400156: Bip002 R Toe02
+    400158: Bip002 R Toe0Nub
+    400160: Bip002 R UpperArm
+    400162: Bip002 Spine
+    400164: Bip002 Spine1
+    400166: Bip002 Spine2
+    400168: Bip002 Spine3
+    400170: Cup
+    400172: Cup001
+    400174: Dummy002
+    400176: Mac
+    400178: Mouse
+    400180: Notebook
+    400182: Socket+cable
+    400184: Stool
+    400186: Table 1
+    400188: Table2Leg
+    400190: Table2Leg001
+    400192: Table2Leg002
+    400194: Table2Leg003
+    400196: TrashCan
+    400198: Mac Keyboard
+    400200: Table2Leg004
+    400202: Journal
+    400204: Box002
+    400206: CameraStand
+    400208: Bottle
+    400210: Couch001
+    400212: Couch_Blanket
+    400214: Couch_Pillowsww
+    400216: NewsPaper
+    400218: Vase 1
+    400220: Book
+    400222: Book001
+    400224: Book002
+    400226: Book003
+    400228: Book004
+    400230: Book005
+    400232: Book006
+    400234: Book007
+    400236: Bottle_of_Wine
+    400238: Elephant statue
+    400240: Elephant statue001
+    400242: Wineglass
+    400244: Wineglass001
+    400246: Bed Dummy
+    400248: Dryer 2
+    400250: Plane001
+    400252: SmallTable
+    400254: SmallTable001
+    400256: Plane002
+    400258: Shadows
+    400260: Rug
+    400262: Shadow
+    400264: Shadow001
+    400266: Shadow002
+    400268: Shadow003
+    400270: Sofa
+    400272: Camera002
+    400274: Camera002.Target
+    400276: F_Camera
+    400278: F_Film
+    400280: F_Frame
+    400282: F_Lense
+    400284: F_Table
+    400286: F_Tree
+    400288: Front
+    2300000: Bed_Blanketedge
+    2300002: Bed_matt
+    2300004: Bed_pillow
+    2300006: Bed_pillow2
+    2300008: Bed_railingF
+    2300010: Candle
+    2300012: Ch_carcas
+    2300014: Ch_carcas001
+    2300016: Ch_pillow
+    2300018: Ch_pillow001
+    2300020: Ch_seat
+    2300022: Ch_seat001
+    2300024: Chair_Buttons
+    2300026: Chair_Buttons001
+    2300028: Chest
+    2300030: Couch
+    2300032: Door001
+    2300034: DoorKnob
+    2300036: Doorway
+    2300038: Dryer
+    2300040: Lamp
+    2300042: Lamp001
+    2300044: Lamp002
+    2300046: NoteBoard
+    2300048: Picture Frame1
+    2300050: Room
+    2300052: Shelf
+    2300054: Table
+    2300056: Vase
+    2300058: Window001
+    2300060: Window002
+    2300062: Books1
+    2300064: Pictureframe002
+    2300066: Pictureframe003
+    2300068: Pictureframe1
+    2300070: Pictureframe004
+    2300072: Switch
+    2300074: Object001
+    2300076: Lamp003
+    2300078: Pictureframe005
+    2300080: Tree
+    2300082: Box001
+    2300084: Cup
+    2300086: Cup001
+    2300088: Mac
+    2300090: Mouse
+    2300092: Notebook
+    2300094: Socket+cable
+    2300096: Stool
+    2300098: Table 1
+    2300100: Table2Leg
+    2300102: Table2Leg001
+    2300104: Table2Leg002
+    2300106: Table2Leg003
+    2300108: TrashCan
+    2300110: Mac Keyboard
+    2300112: Table2Leg004
+    2300114: Journal
+    2300116: Box002
+    2300118: CameraStand
+    2300120: Bottle
+    2300122: Couch001
+    2300124: Couch_Blanket
+    2300126: Couch_Pillowsww
+    2300128: NewsPaper
+    2300130: Vase 1
+    2300132: Book
+    2300134: Book001
+    2300136: Book002
+    2300138: Book003
+    2300140: Book004
+    2300142: Book005
+    2300144: Book006
+    2300146: Book007
+    2300148: Bottle_of_Wine
+    2300150: Elephant statue
+    2300152: Elephant statue001
+    2300154: Wineglass
+    2300156: Wineglass001
+    2300158: Dryer 2
+    2300160: Plane001
+    2300162: SmallTable
+    2300164: SmallTable001
+    2300166: Plane002
+    2300168: Shadows
+    2300170: Rug
+    2300172: Shadow
+    2300174: Shadow001
+    2300176: Shadow002
+    2300178: Shadow003
+    2300180: F_Camera
+    2300182: F_Film
+    2300184: F_Frame
+    2300186: F_Lense
+    2300188: F_Table
+    2300190: F_Tree
+    3300000: Bed_Blanketedge
+    3300002: Bed_matt
+    3300004: Bed_pillow
+    3300006: Bed_pillow2
+    3300008: Bed_railingF
+    3300010: Candle
+    3300012: Ch_carcas
+    3300014: Ch_carcas001
+    3300016: Ch_pillow
+    3300018: Ch_pillow001
+    3300020: Ch_seat
+    3300022: Ch_seat001
+    3300024: Chair_Buttons
+    3300026: Chair_Buttons001
+    3300028: Chest
+    3300030: Couch
+    3300032: Door001
+    3300034: DoorKnob
+    3300036: Doorway
+    3300038: Dryer
+    3300040: Lamp
+    3300042: Lamp001
+    3300044: Lamp002
+    3300046: NoteBoard
+    3300048: Picture Frame1
+    3300050: Room
+    3300052: Shelf
+    3300054: Table
+    3300056: Vase
+    3300058: Window001
+    3300060: Window002
+    3300062: Books1
+    3300064: Pictureframe002
+    3300066: Pictureframe003
+    3300068: Pictureframe1
+    3300070: Pictureframe004
+    3300072: Switch
+    3300074: Object001
+    3300076: Lamp003
+    3300078: Pictureframe005
+    3300080: Tree
+    3300082: Box001
+    3300084: Cup
+    3300086: Cup001
+    3300088: Mac
+    3300090: Mouse
+    3300092: Notebook
+    3300094: Socket+cable
+    3300096: Stool
+    3300098: Table 1
+    3300100: Table2Leg
+    3300102: Table2Leg001
+    3300104: Table2Leg002
+    3300106: Table2Leg003
+    3300108: TrashCan
+    3300110: Mac Keyboard
+    3300112: Table2Leg004
+    3300114: Journal
+    3300116: Box002
+    3300118: CameraStand
+    3300120: Bottle
+    3300122: Couch001
+    3300124: Couch_Blanket
+    3300126: Couch_Pillowsww
+    3300128: NewsPaper
+    3300130: Vase 1
+    3300132: Book
+    3300134: Book001
+    3300136: Book002
+    3300138: Book003
+    3300140: Book004
+    3300142: Book005
+    3300144: Book006
+    3300146: Book007
+    3300148: Bottle_of_Wine
+    3300150: Elephant statue
+    3300152: Elephant statue001
+    3300154: Wineglass
+    3300156: Wineglass001
+    3300158: Dryer 2
+    3300160: Plane001
+    3300162: SmallTable
+    3300164: SmallTable001
+    3300166: Plane002
+    3300168: Shadows
+    3300170: Rug
+    3300172: Shadow
+    3300174: Shadow001
+    3300176: Shadow002
+    3300178: Shadow003
+    3300180: F_Camera
+    3300182: F_Film
+    3300184: F_Frame
+    3300186: F_Lense
+    3300188: F_Table
+    3300190: F_Tree
+    4300000: Room
+    4300002: Window001
+    4300004: Doorway
+    4300006: Window002
+    4300008: Couch
+    4300010: Dryer
+    4300012: Door001
+    4300014: DoorKnob
+    4300016: Lamp001
+    4300018: Lamp
+    4300020: Lamp002
+    4300022: Table
+    4300024: Chest
+    4300026: Bed_matt
+    4300028: Bed_pillow
+    4300030: Bed_pillow2
+    4300032: Bed_Blanketedge
+    4300034: NoteBoard
+    4300036: Ch_pillow
+    4300038: Ch_carcas
+    4300040: Ch_seat
+    4300042: Chair_Buttons
+    4300044: Bed_railingF
+    4300046: Ch_pillow001
+    4300048: Ch_carcas001
+    4300050: Ch_seat001
+    4300052: Chair_Buttons001
+    4300054: Shelf
+    4300056: Vase
+    4300058: Picture Frame1
+    4300060: Candle
+    4300062: Books1
+    4300064: Pictureframe1
+    4300066: Pictureframe002
+    4300068: Pictureframe003
+    4300070: Switch
+    4300072: Pictureframe004
+    4300074: Object001
+    4300076: Pictureframe005
+    4300078: Tree
+    4300080: Lamp003
+    4300082: Box001
+    4300084: Stool
+    4300086: Table
+    4300088: Mac
+    4300090: Socket+cable
+    4300092: Table2Leg003
+    4300094: Table2Leg
+    4300096: Table2Leg002
+    4300098: Table2Leg001
+    4300100: TrashCan
+    4300102: Cup
+    4300104: Cup001
+    4300106: Mouse
+    4300108: Notebook
+    4300110: Mac Keyboard
+    4300112: Table2Leg004
+    4300114: Journal
+    4300116: Box002
+    4300118: CameraStand
+    4300120: Vase
+    4300122: Bottle
+    4300124: NewsPaper
+    4300126: Couch001
+    4300128: Couch_Pillowsww
+    4300130: Couch_Blanket
+    4300132: Bottle_of_Wine
+    4300134: Wineglass
+    4300136: Wineglass001
+    4300138: Book
+    4300140: Book001
+    4300142: Book002
+    4300144: Book003
+    4300146: Book004
+    4300148: Book005
+    4300150: Elephant statue
+    4300152: Book006
+    4300154: Book007
+    4300156: Elephant statue001
+    4300158: Plane001
+    4300160: SmallTable
+    4300162: SmallTable001
+    4300164: Dryer 2
+    4300166: Plane002
+    4300168: Shadows
+    4300170: Shadow
+    4300172: Shadow001
+    4300174: Shadow003
+    4300176: Shadow002
+    4300178: Rug
+    4300180: F_Frame
+    4300182: F_Camera
+    4300184: F_Lense
+    4300186: F_Film
+    4300188: F_Table
+    4300190: F_Tree
+    7400000: Scene_07
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
