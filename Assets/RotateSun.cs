@@ -18,6 +18,8 @@ public class RotateSun : MonoBehaviour
 	public Light Light;
 	public AnimationCurve lightIntensityOverDirection;
 	public float lightMaxIntensity;
+	bool rotateAgain;
+	bool isRotating;
 
 
 	private void Awake() {
@@ -28,6 +30,10 @@ public class RotateSun : MonoBehaviour
 
 	[Button("Rotate")]
 	private void Action_performed(InputAction.CallbackContext e) {
+		if (isRotating) {
+			rotateAgain = true;
+			return;
+		}
 		timeStarted = Time.time;
 		rotationAtStart = transform.rotation;
 		rotationAtEnd = transform.rotation * Quaternion.AngleAxis(Angle, Axis);
@@ -36,11 +42,17 @@ public class RotateSun : MonoBehaviour
 	}
 
 	IEnumerator Rotate() {
+		isRotating = true;
 		while (transform.rotation != rotationAtEnd) {
 			yield return null;
 			transform.rotation = Quaternion.Lerp(rotationAtStart, rotationAtEnd, (Time.time - timeStarted) / time);
 			var dot = Vector3.Dot(Light.transform.forward, Vector3.down);
 			Light.intensity = lightIntensityOverDirection.Evaluate(dot) * lightMaxIntensity;
+		}
+		isRotating = false;
+		if (rotateAgain) {
+			rotateAgain = false;
+			Action_performed(default);
 		}
 	}
 

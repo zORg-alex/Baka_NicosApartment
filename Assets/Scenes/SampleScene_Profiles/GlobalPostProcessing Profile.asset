@@ -18,7 +18,7 @@ MonoBehaviour:
     value: 1
   filtering:
     overrideState: 1
-    value: {x: 33.371033, y: 99}
+    value: {x: 68.88725, y: 99}
   minLuminance:
     overrideState: 1
     value: 0
@@ -166,10 +166,10 @@ MonoBehaviour:
     value: 2.77
   aperture:
     overrideState: 1
-    value: 6
+    value: 21.9
   focalLength:
     overrideState: 1
-    value: 50
+    value: 15
   kernelSize:
     overrideState: 1
-    value: 1
+    value: 0
