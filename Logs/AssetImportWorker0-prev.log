@@ -15,11 +15,11 @@ C:/Users/zorg-/source/repos/Baka_NicosApartment
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54448
+51378
 Successfully changed project path to: C:/Users/zorg-/source/repos/Baka_NicosApartment
 C:/Users/zorg-/source/repos/Baka_NicosApartment
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 96.53 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 97.59 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.7f1 (d91830b65d9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Resources/UnitySubsystems
@@ -35,840 +35,877 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56228
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56164
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001619 seconds.
+Registered in 0.001562 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 93.95 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 88.25 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.221 seconds
+- Completed reload, in  1.015 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005582 seconds.
+Registered in 0.007605 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 94.87 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 88.91 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.414 seconds
+- Completed reload, in  1.358 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3109 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 121.6 MB.
-System memory in use after: 121.8 MB.
+System memory in use before: 121.7 MB.
+System memory in use after: 121.9 MB.
 
 Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 3619.
-Total: 17.155000 ms (FindLiveObjects: 0.226300 ms CreateObjectMapping: 0.114000 ms MarkObjects: 16.746000 ms  DeleteObjects: 0.067800 ms)
+Total: 17.375100 ms (FindLiveObjects: 0.247000 ms CreateObjectMapping: 0.128600 ms MarkObjects: 16.926800 ms  DeleteObjects: 0.071900 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Resources/Textures/George_N.png
-  artifactKey: Guid(a802120dfb1eeb14bbea7981015a2a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Textures/George_N.png using Guid(a802120dfb1eeb14bbea7981015a2a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7400b97fb0d5aa76a16f5ecef04804be') in 0.101802 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 228.712350 seconds.
-  path: Assets/Resources/Textures/George_N.png
-  artifactKey: Guid(a802120dfb1eeb14bbea7981015a2a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Textures/George_N.png using Guid(a802120dfb1eeb14bbea7981015a2a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ac21b24a623ef1378805de612e46796') in 0.015793 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4982.052929 seconds.
-  path: Assets/Resources/Textures/George_N.png
-  artifactKey: Guid(a802120dfb1eeb14bbea7981015a2a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Textures/George_N.png using Guid(a802120dfb1eeb14bbea7981015a2a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '211f9ed19ae607fa89d4beb26ba4cdb9') in 0.029270 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 52.858641 seconds.
   path: Assets/Materials/Character/George_.fbx
   artifactKey: Guid(6d7c80d4615d5d14b8fe9905d7933f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Character/George_.fbx using Guid(6d7c80d4615d5d14b8fe9905d7933f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27fee3f024292b23d2b5e5e22ad1aff5') in 0.289216 seconds 
+Start importing Assets/Materials/Character/George_.fbx using Guid(6d7c80d4615d5d14b8fe9905d7933f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e10237ee4503268f0bb18f8eace5e4ce') in 0.244803 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007489 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  9.709 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 7.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3076 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.5 MB.
+System memory in use after: 137.7 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3666.
+Total: 552.625400 ms (FindLiveObjects: 0.495200 ms CreateObjectMapping: 0.274400 ms MarkObjects: 551.776000 ms  DeleteObjects: 0.077600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005077 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.257 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3076 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.6 MB.
+System memory in use after: 137.8 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3669.
+Total: 17.221900 ms (FindLiveObjects: 0.234100 ms CreateObjectMapping: 0.109500 ms MarkObjects: 16.828100 ms  DeleteObjects: 0.049100 ms)
+
 ========================================================================
 Received Import Request.
-  Time since last request: 59.524287 seconds.
-  path: Assets/Materials/Character/George Tex 1.mat
-  artifactKey: Guid(ad3ec748a8da47044900a83fed440ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Character/George Tex 1.mat using Guid(ad3ec748a8da47044900a83fed440ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2b9ed9a403ec2e76a64f8d7cbeae05d') in 0.041479 seconds 
+  Time since last request: 2272.005723 seconds.
+  path: Assets/Materials/Character/Materials/Hair.mat
+  artifactKey: Guid(c5aa0f21865c58341bc69e2913dc570d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Character/Materials/Hair.mat using Guid(c5aa0f21865c58341bc69e2913dc570d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42b97b0722a4bca63d360bb8919796b4') in 0.076331 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3020.821687 seconds.
-  path: Assets/Materials/Character/George_.prefab
-  artifactKey: Guid(442470cc28bad04428a6df2552ed558b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Character/George_.prefab using Guid(442470cc28bad04428a6df2552ed558b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b28e35ed1b6a833ee9fa2fb2e02fc9f7') in 0.102211 seconds 
+  Time since last request: 0.000251 seconds.
+  path: Assets/Materials/Character/Materials/Tex_001.mat
+  artifactKey: Guid(eb2a8f39082fce54982f0c73ea4f575b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Character/Materials/Tex_001.mat using Guid(eb2a8f39082fce54982f0c73ea4f575b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8623db83d7cd4fda4ecbcf1371431b2f') in 0.028539 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 28.594074 seconds.
-  path: Assets/Materials/Character/George_.fbx
-  artifactKey: Guid(6d7c80d4615d5d14b8fe9905d7933f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Character/George_.fbx using Guid(6d7c80d4615d5d14b8fe9905d7933f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c17aec884ade5d2197b172a21e9eb403') in 0.165109 seconds 
+  Time since last request: 10.446090 seconds.
+  path: Assets/Scenes/SampleScene_Profiles/GlobalPostProcessing Profile.asset
+  artifactKey: Guid(be0b2fa1bce6afe4c8deaa9e18ec147d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene_Profiles/GlobalPostProcessing Profile.asset using Guid(be0b2fa1bce6afe4c8deaa9e18ec147d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '284af67602fe6df6d3e9c78bd92e6cbd') in 0.018247 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1647.758981 seconds.
-  path: Assets/Materials/Character/George_.fbx
-  artifactKey: Guid(6d7c80d4615d5d14b8fe9905d7933f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Character/George_.fbx using Guid(6d7c80d4615d5d14b8fe9905d7933f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4519b992daeb8019c80f98d0ede361df') in 0.333547 seconds 
+  Time since last request: 922.091571 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(e245431458a2c06478fe9404ca5151e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(e245431458a2c06478fe9404ca5151e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09282a728363e3de1caa6bf674a443fd') in 0.011995 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006197 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.469 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3078 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.6 MB.
+System memory in use after: 137.9 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3675.
+Total: 20.764200 ms (FindLiveObjects: 0.279700 ms CreateObjectMapping: 0.124400 ms MarkObjects: 20.289700 ms  DeleteObjects: 0.069200 ms)
+
 ========================================================================
 Received Import Request.
-  Time since last request: 37.423829 seconds.
-  path: Assets/Materials/Character/George_.fbx
-  artifactKey: Guid(6d7c80d4615d5d14b8fe9905d7933f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Character/George_.fbx using Guid(6d7c80d4615d5d14b8fe9905d7933f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b8d40b69f605b409601dbac7011f846') in 0.110237 seconds 
+  Time since last request: 35.337474 seconds.
+  path: Assets/Scripts/PlayerMovement.cs
+  artifactKey: Guid(80124313d6dca7445b3a275c3e157eaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerMovement.cs using Guid(80124313d6dca7445b3a275c3e157eaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e873d5526ec5495739936d5f3b08bc98') in 0.017795 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008290 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.474 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.7 MB.
+System memory in use after: 138.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3681.
+Total: 23.204000 ms (FindLiveObjects: 0.256700 ms CreateObjectMapping: 0.128600 ms MarkObjects: 22.755300 ms  DeleteObjects: 0.062200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008317 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.60 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.341 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.8 MB.
+System memory in use after: 138.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3684.
+Total: 24.476300 ms (FindLiveObjects: 0.330500 ms CreateObjectMapping: 0.322300 ms MarkObjects: 23.765600 ms  DeleteObjects: 0.054300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005513 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.348 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.8 MB.
+System memory in use after: 138.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3687.
+Total: 19.120100 ms (FindLiveObjects: 0.312500 ms CreateObjectMapping: 0.125100 ms MarkObjects: 18.616100 ms  DeleteObjects: 0.065200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006070 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.367 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.8 MB.
+System memory in use after: 138.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3690.
+Total: 17.627000 ms (FindLiveObjects: 0.227700 ms CreateObjectMapping: 0.110000 ms MarkObjects: 17.237700 ms  DeleteObjects: 0.050200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005259 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.520 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.8 MB.
+System memory in use after: 138.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3693.
+Total: 18.222300 ms (FindLiveObjects: 0.217600 ms CreateObjectMapping: 0.130600 ms MarkObjects: 17.827700 ms  DeleteObjects: 0.045400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005821 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.280 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.8 MB.
+System memory in use after: 138.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3696.
+Total: 17.748400 ms (FindLiveObjects: 0.229800 ms CreateObjectMapping: 0.151000 ms MarkObjects: 17.315300 ms  DeleteObjects: 0.051300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006476 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.395 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.8 MB.
+System memory in use after: 138.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3699.
+Total: 31.935200 ms (FindLiveObjects: 0.475400 ms CreateObjectMapping: 0.613600 ms MarkObjects: 30.574700 ms  DeleteObjects: 0.268100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005729 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.566 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.8 MB.
+System memory in use after: 138.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3702.
+Total: 24.785300 ms (FindLiveObjects: 0.370400 ms CreateObjectMapping: 0.260700 ms MarkObjects: 24.108600 ms  DeleteObjects: 0.043500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005188 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.565 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.8 MB.
+System memory in use after: 138.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3705.
+Total: 26.243200 ms (FindLiveObjects: 0.260000 ms CreateObjectMapping: 0.157900 ms MarkObjects: 25.730600 ms  DeleteObjects: 0.093000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006705 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.566 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.8 MB.
+System memory in use after: 138.1 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3708.
+Total: 24.042900 ms (FindLiveObjects: 0.264100 ms CreateObjectMapping: 0.168700 ms MarkObjects: 23.561200 ms  DeleteObjects: 0.047700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005234 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.497 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.9 MB.
+System memory in use after: 138.1 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3711.
+Total: 22.291500 ms (FindLiveObjects: 0.365100 ms CreateObjectMapping: 0.246000 ms MarkObjects: 21.627600 ms  DeleteObjects: 0.051600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005430 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.610 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.90 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.9 MB.
+System memory in use after: 138.1 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3714.
+Total: 24.472800 ms (FindLiveObjects: 0.541100 ms CreateObjectMapping: 0.479200 ms MarkObjects: 23.402200 ms  DeleteObjects: 0.048000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005786 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.472 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.9 MB.
+System memory in use after: 138.1 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3717.
+Total: 29.233700 ms (FindLiveObjects: 0.682900 ms CreateObjectMapping: 0.486700 ms MarkObjects: 28.010600 ms  DeleteObjects: 0.051600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005280 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.342 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.9 MB.
+System memory in use after: 138.1 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3720.
+Total: 18.720000 ms (FindLiveObjects: 0.229000 ms CreateObjectMapping: 0.127300 ms MarkObjects: 18.310700 ms  DeleteObjects: 0.051400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009188 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.701 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.9 MB.
+System memory in use after: 138.1 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3723.
+Total: 22.786900 ms (FindLiveObjects: 0.306500 ms CreateObjectMapping: 0.139600 ms MarkObjects: 22.289500 ms  DeleteObjects: 0.050200 ms)
+
 ========================================================================
 Received Import Request.
-  Time since last request: 334.204831 seconds.
+  Time since last request: 5049.010846 seconds.
+  path: Assets/Input.inputactions
+  artifactKey: Guid(c09a2a65fa80bfe4da6c29c30fd4cc74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Input.inputactions using Guid(c09a2a65fa80bfe4da6c29c30fd4cc74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6997c6cd95660173fec04a1daada443c') in 0.047354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 164.908309 seconds.
+  path: Assets/Input.inputactions
+  artifactKey: Guid(c09a2a65fa80bfe4da6c29c30fd4cc74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Input.inputactions using Guid(c09a2a65fa80bfe4da6c29c30fd4cc74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aad22c3192c0964ddb227523c50e7cf7') in 0.006021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.902141 seconds.
+  path: Assets/Input.inputactions
+  artifactKey: Guid(c09a2a65fa80bfe4da6c29c30fd4cc74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Input.inputactions using Guid(c09a2a65fa80bfe4da6c29c30fd4cc74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a52d7b47fa3cc557a69bd55c4e2ea03') in 0.003934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.052270 seconds.
+  path: Assets/Input.cs
+  artifactKey: Guid(02ec189a1a62d14499fadba0aa038305) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Input.cs using Guid(02ec189a1a62d14499fadba0aa038305) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa0f07e2ae586fea54bb9842bd6c9cb9') in 0.002194 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 86.113238 seconds.
+  path: Assets/PlayerInput.inputactions
+  artifactKey: Guid(c09a2a65fa80bfe4da6c29c30fd4cc74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerInput.inputactions using Guid(c09a2a65fa80bfe4da6c29c30fd4cc74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97227d145b48402756b272001b6290e4') in 0.008375 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006351 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.920 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.0 MB.
+System memory in use after: 138.2 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3727.
+Total: 27.935600 ms (FindLiveObjects: 0.437700 ms CreateObjectMapping: 0.246600 ms MarkObjects: 27.088900 ms  DeleteObjects: 0.160600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007340 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.697 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.0 MB.
+System memory in use after: 138.2 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3730.
+Total: 25.334100 ms (FindLiveObjects: 0.397200 ms CreateObjectMapping: 0.285400 ms MarkObjects: 24.529200 ms  DeleteObjects: 0.119900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005672 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.629 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.0 MB.
+System memory in use after: 138.2 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3733.
+Total: 21.436200 ms (FindLiveObjects: 0.276900 ms CreateObjectMapping: 0.158200 ms MarkObjects: 20.948600 ms  DeleteObjects: 0.051400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006788 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.093 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.17 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.0 MB.
+System memory in use after: 138.2 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3736.
+Total: 35.871300 ms (FindLiveObjects: 0.356000 ms CreateObjectMapping: 0.312900 ms MarkObjects: 35.112600 ms  DeleteObjects: 0.086600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007817 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.882 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.0 MB.
+System memory in use after: 138.2 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3739.
+Total: 34.894600 ms (FindLiveObjects: 0.425000 ms CreateObjectMapping: 0.203900 ms MarkObjects: 34.176500 ms  DeleteObjects: 0.086300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007360 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.672 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.17 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.0 MB.
+System memory in use after: 138.2 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3742.
+Total: 30.300000 ms (FindLiveObjects: 0.581500 ms CreateObjectMapping: 0.210300 ms MarkObjects: 29.413400 ms  DeleteObjects: 0.092700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007612 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.812 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.27 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.0 MB.
+System memory in use after: 138.2 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3745.
+Total: 28.250400 ms (FindLiveObjects: 1.066400 ms CreateObjectMapping: 0.481100 ms MarkObjects: 26.630100 ms  DeleteObjects: 0.066200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007276 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.794 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.0 MB.
+System memory in use after: 138.2 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3748.
+Total: 26.104500 ms (FindLiveObjects: 0.328900 ms CreateObjectMapping: 0.183800 ms MarkObjects: 25.519700 ms  DeleteObjects: 0.070900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 4385.924594 seconds.
+  path: Assets/Materials/Character/George Tex.mat
+  artifactKey: Guid(9c8331e5f12cdec4aa61ec552fc3f7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Character/George Tex.mat using Guid(9c8331e5f12cdec4aa61ec552fc3f7a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7edf4cf27914ec2475a73e8e8d70df1') in 0.160761 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006858 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.632 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.1 MB.
+System memory in use after: 138.3 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3752.
+Total: 21.567300 ms (FindLiveObjects: 0.342900 ms CreateObjectMapping: 0.119900 ms MarkObjects: 21.046200 ms  DeleteObjects: 0.056800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 126.224944 seconds.
+  path: Assets/Materials/Character/Char 1.controller
+  artifactKey: Guid(f6902cc19463511479e1b7cc4eb12401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Character/Char 1.controller using Guid(f6902cc19463511479e1b7cc4eb12401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f11568e46223103842aaaf5459cbdcaa') in 0.037035 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.656096 seconds.
   path: Assets/Materials/Character/George_.controller
-  artifactKey: Guid(be1d056d5cfedbd45b87f9d1c7a9f11e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Character/George_.controller using Guid(be1d056d5cfedbd45b87f9d1c7a9f11e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '637e74ceec6aed936d2ba574cf7ce6c4') in 0.007304 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 55.055002 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_01.fbx
-  artifactKey: Guid(873c03181721aef4cbb47dc9af7c07b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_01.fbx using Guid(873c03181721aef4cbb47dc9af7c07b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e154c21e7f1f20d7b6c82839b95b1d9e') in 0.020340 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000297 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_20.fbx
-  artifactKey: Guid(25cd07ce377abfe4ca10ebafb67772fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_20.fbx using Guid(25cd07ce377abfe4ca10ebafb67772fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3baedd8aab097732e2e5673566552a9') in 0.026074 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_31.fbx
-  artifactKey: Guid(01d5b61ba3d34ca4298aee3ad347822e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_31.fbx using Guid(01d5b61ba3d34ca4298aee3ad347822e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70b80fb73486f72b457748137f27c4f1') in 0.023711 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000278 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_22.fbx
-  artifactKey: Guid(686dc22b172f33a4eaedca5b71439c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_22.fbx using Guid(686dc22b172f33a4eaedca5b71439c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25bf536087365585b3239f03297b8f2f') in 0.026930 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_06.fbx
-  artifactKey: Guid(bd60ad0813d55044493b30e7b55eb76e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_06.fbx using Guid(bd60ad0813d55044493b30e7b55eb76e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c99aabc7304deceec5ca134803e38682') in 0.021332 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000301 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_08.fbx
-  artifactKey: Guid(392d55c292a6e754c81c83885d2695f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_08.fbx using Guid(392d55c292a6e754c81c83885d2695f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fae85b817d0a91c89fadf5fb014c25d') in 0.019612 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_30.fbx
-  artifactKey: Guid(3d9e883b96ddc6249a3cc9d1aa740523) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_30.fbx using Guid(3d9e883b96ddc6249a3cc9d1aa740523) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a9383dae05d96f5c520575369ba6696') in 0.021261 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000315 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_03.fbx
-  artifactKey: Guid(f20b495b7247de04daa14e36384d894d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_03.fbx using Guid(f20b495b7247de04daa14e36384d894d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e8e1946e9f67e0a5aac3fe184da1635') in 0.021982 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000236 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_11.fbx
-  artifactKey: Guid(1d4b3012618585b4182d249751aebdf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_11.fbx using Guid(1d4b3012618585b4182d249751aebdf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05c64d8827c48a428a31214a7ac043d2') in 0.017840 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000502 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_34.fbx
-  artifactKey: Guid(ee0806d13fc4db84fb63b328b86d4510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_34.fbx using Guid(ee0806d13fc4db84fb63b328b86d4510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7788c5c5471995875f01203d2a3f4578') in 0.018325 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000267 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_24.fbx
-  artifactKey: Guid(072e3d692b32ddc4eb84d8fd13a111e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_24.fbx using Guid(072e3d692b32ddc4eb84d8fd13a111e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b091ff2559217f6ff7ef6a78c567e87b') in 0.023137 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000298 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_41.fbx
-  artifactKey: Guid(3edbd17f4a42005438a7940751a6306d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_41.fbx using Guid(3edbd17f4a42005438a7940751a6306d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8b077c4a1bfe7b99907f8788f8836c6') in 0.017418 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000525 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_42.fbx
-  artifactKey: Guid(6ee7746d609c78c448512b85175662aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_42.fbx using Guid(6ee7746d609c78c448512b85175662aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d653ed32b4354df9d663df1e25ecf64') in 0.019626 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_38.fbx
-  artifactKey: Guid(4e27030c57960b1458aaaec96801ab65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_38.fbx using Guid(4e27030c57960b1458aaaec96801ab65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29c5ab0a4552f74edbabfde5c7210d7c') in 0.019245 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000376 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_10.fbx
-  artifactKey: Guid(7a8340b6a8a41e548b3498014902217e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_10.fbx using Guid(7a8340b6a8a41e548b3498014902217e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed3956a94db49c3d4e0ddfafe370b7fe') in 0.021383 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000156 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_09.fbx
-  artifactKey: Guid(79efc6fa91fbe5544b6f469dff0985f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_09.fbx using Guid(79efc6fa91fbe5544b6f469dff0985f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '005b5ed628bacee2837d4ec22811ee41') in 0.017358 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000391 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_02.fbx
-  artifactKey: Guid(d04e30e4c35a65547a2ee561a6fc25ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_02.fbx using Guid(d04e30e4c35a65547a2ee561a6fc25ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1325e238b8e4fa030b161f6024cc9a9a') in 0.023596 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000284 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_23.fbx
-  artifactKey: Guid(acf7c00bd3a45ca46ba86260363e1633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_23.fbx using Guid(acf7c00bd3a45ca46ba86260363e1633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea2cb3fcce1c3c2045d7ad8f47c2db32') in 0.022538 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_36.fbx
-  artifactKey: Guid(07cb0891b6f604342b6ef90cf0aeb06b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_36.fbx using Guid(07cb0891b6f604342b6ef90cf0aeb06b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e6171e8e52b2ff6f480b485e98a937c') in 0.016881 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000454 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_28.fbx
-  artifactKey: Guid(69f1e18d8994591439138cc9c0cb0900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_28.fbx using Guid(69f1e18d8994591439138cc9c0cb0900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b350609b098b377e95d69c2bcfe4dc4') in 0.020645 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_39.fbx
-  artifactKey: Guid(650eaf6890acf4245bd6645c634f0226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_39.fbx using Guid(650eaf6890acf4245bd6645c634f0226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '935eb5de17b74dc549958fab206c303c') in 0.017672 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000300 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_27.fbx
-  artifactKey: Guid(76ad4d4883b4656448fa58be9aca1a5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_27.fbx using Guid(76ad4d4883b4656448fa58be9aca1a5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe1991c731663c9da9c26e8144e90ead') in 0.023083 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_13.fbx
-  artifactKey: Guid(afa5b9b41bbe29d4588e18b069ba1579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_13.fbx using Guid(afa5b9b41bbe29d4588e18b069ba1579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9befcee69737e510faa0debbe20908c1') in 0.017188 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000624 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_17.fbx
-  artifactKey: Guid(d00bd10146241ff43b520b0c36add36e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_17.fbx using Guid(d00bd10146241ff43b520b0c36add36e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '424159b7b51421caf819a3487dac5cee') in 0.022645 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000231 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_16.fbx
-  artifactKey: Guid(7ac0e48683ef4a543a2e39c024b85ca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_16.fbx using Guid(7ac0e48683ef4a543a2e39c024b85ca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a1ef241715184e6407d7afd6ff792e1') in 0.019958 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000261 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_12.fbx
-  artifactKey: Guid(cb86a85412cb9294ea502294efb71ed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_12.fbx using Guid(cb86a85412cb9294ea502294efb71ed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d86c2af57401070a92dd1a5b8e64ff') in 0.020534 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000263 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_19.fbx
-  artifactKey: Guid(9b93b5d999d95f549886e12ade72c583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_19.fbx using Guid(9b93b5d999d95f549886e12ade72c583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37a9dbc7c84430fbeca15deb8ed9b5e7') in 0.017991 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000471 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_40.fbx
-  artifactKey: Guid(2386c548ea2206f4f9fc9b94b7540fa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_40.fbx using Guid(2386c548ea2206f4f9fc9b94b7540fa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4700cb3e5ff7414188144d38a0837da4') in 0.017424 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000238 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_37.fbx
-  artifactKey: Guid(190e86d1000646c488b8008268054e3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_37.fbx using Guid(190e86d1000646c488b8008268054e3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eb3d9cd2f720c21f1e62be0b0d6c84d') in 0.017755 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000298 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_21.fbx
-  artifactKey: Guid(f602722e779c3aa4aa7d72948ae08e0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_21.fbx using Guid(f602722e779c3aa4aa7d72948ae08e0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6157af5896067fb5199cba20521ca681') in 0.022082 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_04.fbx
-  artifactKey: Guid(465f03eb071ba5e4994bbd2577595108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_04.fbx using Guid(465f03eb071ba5e4994bbd2577595108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4adf7db1d6b24cabba5c80cc51b0f018') in 0.024409 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000293 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_07.fbx
-  artifactKey: Guid(eb3383bbdbb51f6439444774c1f02784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_07.fbx using Guid(eb3383bbdbb51f6439444774c1f02784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '998802ef704fff5d567cf6db2a3b5d8e') in 0.017994 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000232 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_29.fbx
-  artifactKey: Guid(e98333fd6680fe2438b7d70e4144d038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_29.fbx using Guid(e98333fd6680fe2438b7d70e4144d038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2861a3c99d7ee495281f819bbe8a2c0c') in 0.022594 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000201 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_26.fbx
-  artifactKey: Guid(564c759540432b041bfac52b4f268d1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_26.fbx using Guid(564c759540432b041bfac52b4f268d1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4be4916a063eba7773a2a96aae13f0a4') in 0.020794 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000213 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_14.fbx
-  artifactKey: Guid(91066d4889f75a24998fc378977941a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_14.fbx using Guid(91066d4889f75a24998fc378977941a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a41d5a9a39a6c29958ceb25c17aeaea') in 0.020064 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000211 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_32.fbx
-  artifactKey: Guid(c2d2bb609fbec7d4680e137f40b2fe5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_32.fbx using Guid(c2d2bb609fbec7d4680e137f40b2fe5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '024891246d9e637f4e4142fc5acbd807') in 0.016804 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000513 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_05.fbx
-  artifactKey: Guid(e0bf0ad5739de764baea785c9be62f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_05.fbx using Guid(e0bf0ad5739de764baea785c9be62f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2578d3d8748a46bb606be2662c215ebe') in 0.023602 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_18.fbx
-  artifactKey: Guid(71da07814c1f980408d95df82e985a3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_18.fbx using Guid(71da07814c1f980408d95df82e985a3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '914ddc79850f154c0af07e4ccc955044') in 0.022735 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_35.fbx
-  artifactKey: Guid(d8b53834f820ff648af7dfe541ad900a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_35.fbx using Guid(d8b53834f820ff648af7dfe541ad900a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e3eea56c142b2a2fe9e39a7bdb17297') in 0.018088 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000255 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_33.fbx
-  artifactKey: Guid(b81c96e001049d1469f7076860c8da89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_33.fbx using Guid(b81c96e001049d1469f7076860c8da89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d1456ca3cfd66b07d4312470083a4ce') in 0.021083 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000383 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_15.fbx
-  artifactKey: Guid(42c5492269b809247b68188b8faee447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_15.fbx using Guid(42c5492269b809247b68188b8faee447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3243c030e931bba64cad6f1d2e20915c') in 0.020336 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000276 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/13_Sitting/13_25.fbx
-  artifactKey: Guid(82e0b640b8b472f41be71dd7c4d7fd06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/13_Sitting/13_25.fbx using Guid(82e0b640b8b472f41be71dd7c4d7fd06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '625bc80654dd59beada9395fc96c2843') in 0.023245 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 272.779493 seconds.
-  path: Assets/G_Target_Sit.FBX
-  artifactKey: Guid(47072471265909549b30c77c17650896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/G_Target_Sit.FBX using Guid(47072471265909549b30c77c17650896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c24fa5a6fe890c5f33931f1e2963e16e') in 0.023080 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 33.373137 seconds.
-  path: Assets/G_TurnRight90.FBX
-  artifactKey: Guid(3638caf9825ddc1429f19c31bf91954f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/G_TurnRight90.FBX using Guid(3638caf9825ddc1429f19c31bf91954f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '781fcbe85af13eda1658c2c698c11b2f') in 0.015677 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 16.811098 seconds.
-  path: Assets/G_TurnRight180.FBX
-  artifactKey: Guid(9075d8ca9c3091e4991f099ebc3f339c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/G_TurnRight180.FBX using Guid(9075d8ca9c3091e4991f099ebc3f339c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cf88ac7ca269f63b6215e55313d91a6') in 0.014607 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.870434 seconds.
-  path: Assets/G_Walk.FBX
-  artifactKey: Guid(2d741c0d80a71f44ca774f52daeda5b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/G_Walk.FBX using Guid(2d741c0d80a71f44ca774f52daeda5b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db60d0c531085f2f7136c242463b54a7') in 0.012029 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 88.931955 seconds.
-  path: Assets/G_ChairSit.FBX
-  artifactKey: Guid(e7400dcb85943274088a526ab2e5703b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/G_ChairSit.FBX using Guid(e7400dcb85943274088a526ab2e5703b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2658a38e81f9a72688627407ccbb26b0') in 0.014939 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 466.385015 seconds.
-  path: Assets/G_ChairSit.FBX
-  artifactKey: Guid(e7400dcb85943274088a526ab2e5703b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/G_ChairSit.FBX using Guid(e7400dcb85943274088a526ab2e5703b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b12e453d9e475187f582a10fa6ca7763') in 0.012168 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 15.945020 seconds.
-  path: Assets/Materials/Character/Char.controller
-  artifactKey: Guid(c3d820a2f5799cd4e94360f6edd5d1e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Character/Char.controller using Guid(c3d820a2f5799cd4e94360f6edd5d1e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46c109224317c611eb3bfdcc8b057740') in 0.012604 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 429.785960 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_15.fbx
-  artifactKey: Guid(19de7e32e52fde14a8411cfcec8ebd32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_15.fbx using Guid(19de7e32e52fde14a8411cfcec8ebd32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4c47cea114ab7e00a0bb1c54d1f82bd') in 0.023633 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000294 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_16.fbx
-  artifactKey: Guid(27a739012d928444f947f2774c5f2a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_16.fbx using Guid(27a739012d928444f947f2774c5f2a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e8a69714ea66e23faa91aff04d1b201') in 0.022124 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_36.fbx
-  artifactKey: Guid(1f711a0e27ef1cc4ba1041a41bd478c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_36.fbx using Guid(1f711a0e27ef1cc4ba1041a41bd478c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1606d7f4bcfd43a057be33064ab8793') in 0.020472 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_35.fbx
-  artifactKey: Guid(cd50a051a2a594c44832ab3a92fc0eff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_35.fbx using Guid(cd50a051a2a594c44832ab3a92fc0eff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8243c2739dfd255c062c4245730ab8c5') in 0.018342 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000499 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_30.fbx
-  artifactKey: Guid(86ad31dbe0c316341901a48b53d2abfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_30.fbx using Guid(86ad31dbe0c316341901a48b53d2abfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '448015695691908611a54a22e0e365ce') in 0.019721 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_24.fbx
-  artifactKey: Guid(f96b5750d29f07c4a877e6aba5ca4d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_24.fbx using Guid(f96b5750d29f07c4a877e6aba5ca4d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '044da787143f1974a92b95fde409351a') in 0.022800 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_29.fbx
-  artifactKey: Guid(812a411993f11f34397e5d1ede8a7a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_29.fbx using Guid(812a411993f11f34397e5d1ede8a7a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2507b9e164d6161652491e9093d487b') in 0.020991 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_37.fbx
-  artifactKey: Guid(ba8a71318fe4b8a45a41124b997a54da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_37.fbx using Guid(ba8a71318fe4b8a45a41124b997a54da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83f73a59b070bfc09e47b019ace234e9') in 0.016636 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_17.fbx
-  artifactKey: Guid(2be2c1a4a0d173e47b3b98ef2857d2a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_17.fbx using Guid(2be2c1a4a0d173e47b3b98ef2857d2a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8cc09a25b4ec43c15ae427df6f15513') in 0.019651 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000231 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_22.fbx
-  artifactKey: Guid(557a5dba8b572d948a2ceb3b8c03c64b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_22.fbx using Guid(557a5dba8b572d948a2ceb3b8c03c64b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4017bc981e38e528bb3bde3c26b3c7a4') in 0.018389 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_21.fbx
-  artifactKey: Guid(4cf824add09838043963757372a29ee9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_21.fbx using Guid(4cf824add09838043963757372a29ee9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e0c3df9696bb492ff8fdfda7e2fb2b5') in 0.019076 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_23.fbx
-  artifactKey: Guid(f83fb9de076c2f74892606910475dd11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_23.fbx using Guid(f83fb9de076c2f74892606910475dd11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c03eabeb0e5166e33054e4b860e38e30') in 0.018529 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000337 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_27.fbx
-  artifactKey: Guid(b891a12ef50d95d44b8f69de6a56020e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_27.fbx using Guid(b891a12ef50d95d44b8f69de6a56020e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2442c6313f0c06fa459ca87e2de9f6a') in 0.020109 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_25.fbx
-  artifactKey: Guid(f8cb0f336d45687439568c350caf30f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_25.fbx using Guid(f8cb0f336d45687439568c350caf30f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19778250b1af019864481dae01540e71') in 0.023721 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000281 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_32.fbx
-  artifactKey: Guid(9809293738707b444a5f5385fcfab926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_32.fbx using Guid(9809293738707b444a5f5385fcfab926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f771b046f47ac215d8652c9a477f7bcf') in 0.020027 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000397 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_26.fbx
-  artifactKey: Guid(cf0936b822d3c8b409a5c84e82c1f178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_26.fbx using Guid(cf0936b822d3c8b409a5c84e82c1f178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a718d8459a2c62361e5d98882e9beaf1') in 0.024286 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000221 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_34.fbx
-  artifactKey: Guid(7222809d141255c4a99e00ef10dd03c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_34.fbx using Guid(7222809d141255c4a99e00ef10dd03c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '557c7d90aaa377a98b2b91bcec32a507') in 0.019114 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_20.fbx
-  artifactKey: Guid(6e73d32a51df3664d8dde8a646373ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_20.fbx using Guid(6e73d32a51df3664d8dde8a646373ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0854627dcb56d3863f2d413f81ee9655') in 0.021545 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000234 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_19.fbx
-  artifactKey: Guid(4700c89b4e6cfce42bfeceacbb82c119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_19.fbx using Guid(4700c89b4e6cfce42bfeceacbb82c119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5269ae2b36cc7bbd6a2c30abfdd849d4') in 0.022708 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000255 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_18.fbx
-  artifactKey: Guid(2358c23b1d32baa4680de95d1e3080d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_18.fbx using Guid(2358c23b1d32baa4680de95d1e3080d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540c2c0070921283d1dd287607f4abca') in 0.023365 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000232 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_31.fbx
-  artifactKey: Guid(32c8f870fe88d6e46bfc09c965efb52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_31.fbx using Guid(32c8f870fe88d6e46bfc09c965efb52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3759ab4548a81d27a9815093719de874') in 0.020642 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000299 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_28.fbx
-  artifactKey: Guid(49371998636ac2840b3582df2a44608d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_28.fbx using Guid(49371998636ac2840b3582df2a44608d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '636b39a574ba5fc1ffdca1d937f86679') in 0.022316 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000257 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_33.fbx
-  artifactKey: Guid(9001f72cab7b3d341a90f63a2326f120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_33.fbx using Guid(9001f72cab7b3d341a90f63a2326f120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44ae4bc180d2efa4ba8863f0fba6dd2a') in 0.017920 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.089383 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_01.fbx
-  artifactKey: Guid(e0d19447a01da784d888ae11bfdc81e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_01.fbx using Guid(e0d19447a01da784d888ae11bfdc81e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27dfdfa749fd6dca671bfc068f55cc10') in 0.021936 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_08.fbx
-  artifactKey: Guid(d73bbabe40a084f4f8f0fc0badc15b24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_08.fbx using Guid(d73bbabe40a084f4f8f0fc0badc15b24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc109c867511783ccf1e446502648d4d') in 0.021468 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_09.fbx
-  artifactKey: Guid(ce31fd2205735f44c8138c59eb0f22de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_09.fbx using Guid(ce31fd2205735f44c8138c59eb0f22de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c246e839a5591656617cb65ca0b19ccc') in 0.021099 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000416 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_02.fbx
-  artifactKey: Guid(0ada3eb562c004041918e1b7f964854c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_02.fbx using Guid(0ada3eb562c004041918e1b7f964854c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a96268c637527cb6893c0703954e02b3') in 0.025871 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000350 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_06.fbx
-  artifactKey: Guid(203a9717262e3364a9a9965336873584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_06.fbx using Guid(203a9717262e3364a9a9965336873584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a49bf79bbfaf2799e0855f589580348a') in 0.024858 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_11.fbx
-  artifactKey: Guid(986ae99b2f5f1064893213385a7bd949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_11.fbx using Guid(986ae99b2f5f1064893213385a7bd949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84b5a7b3513190f01792640e2990dce0') in 0.021207 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000266 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_12.fbx
-  artifactKey: Guid(3958b00cee38f5e4ea078d7f8b4ac510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_12.fbx using Guid(3958b00cee38f5e4ea078d7f8b4ac510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fea9288d0127c7028772b76f660fe3d4') in 0.021381 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000314 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_05.fbx
-  artifactKey: Guid(99a74eaac5163c14795b08b808392c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_05.fbx using Guid(99a74eaac5163c14795b08b808392c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f604bb14c76b4af525d665e6c2e5c4d') in 0.017098 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000296 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_14.fbx
-  artifactKey: Guid(02b7427f58e281a408c62dc7b9176d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_14.fbx using Guid(02b7427f58e281a408c62dc7b9176d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f60b5b84a89fa668a15ee1a3a8e48e7') in 0.028539 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_07.fbx
-  artifactKey: Guid(b6f97798b7c33284eafcb4a5401262d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_07.fbx using Guid(b6f97798b7c33284eafcb4a5401262d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7f5f7cbb4d8cdfb128b9c3edb3d2e17') in 0.022248 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000283 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_13.fbx
-  artifactKey: Guid(22e4c999c23e4994c8a036d75b356e0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_13.fbx using Guid(22e4c999c23e4994c8a036d75b356e0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd478dc2f1cc02c54af6fa1a6b0436f4c') in 0.025419 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_04.fbx
-  artifactKey: Guid(b3983de9da3b77c47b346e526aa51986) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_04.fbx using Guid(b3983de9da3b77c47b346e526aa51986) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8254d2783c46324d9268a880fe769b3') in 0.019062 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000351 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_03.fbx
-  artifactKey: Guid(234df307b7f6cfa47af4bbafa8fa9063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_03.fbx using Guid(234df307b7f6cfa47af4bbafa8fa9063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7741c57f967157f7816e6f6e76d5c297') in 0.023925 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000248 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_10.fbx
-  artifactKey: Guid(c2d794334895f454598f62b792baa8f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_10.fbx using Guid(c2d794334895f454598f62b792baa8f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'addb11cad4594b22216a5114027f9ab5') in 0.021612 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 200.898861 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_37.fbx
-  artifactKey: Guid(ba8a71318fe4b8a45a41124b997a54da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_37.fbx using Guid(ba8a71318fe4b8a45a41124b997a54da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddf1d338dfed1278f799e7914fd15c20') in 0.007306 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 74.055009 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_36.fbx
-  artifactKey: Guid(1f711a0e27ef1cc4ba1041a41bd478c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_36.fbx using Guid(1f711a0e27ef1cc4ba1041a41bd478c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5f00d87b34e3fbe1fe74c659f63c0e4') in 0.008112 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 16.848894 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_35.fbx
-  artifactKey: Guid(cd50a051a2a594c44832ab3a92fc0eff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_35.fbx using Guid(cd50a051a2a594c44832ab3a92fc0eff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0192e6997380ee51fc7ae728fcca24ee') in 0.007521 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 29.313167 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/14/14_34.fbx
-  artifactKey: Guid(7222809d141255c4a99e00ef10dd03c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/14/14_34.fbx using Guid(7222809d141255c4a99e00ef10dd03c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '823b3bd6479c4191090376130d1e0c23') in 0.008333 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 40.853609 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_01.fbx
-  artifactKey: Guid(1e3bd3d5832a6b54a918ea973d056af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_01.fbx using Guid(1e3bd3d5832a6b54a918ea973d056af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5df4d31f839e3fa423a64ba3c9c476b') in 0.020716 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000324 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_05.fbx
-  artifactKey: Guid(997197d0f86c8b14cbb7462d6f8fa9fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_05.fbx using Guid(997197d0f86c8b14cbb7462d6f8fa9fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c62dc44b3ecd57915d7356c86504d8e') in 0.018364 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000296 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_08.fbx
-  artifactKey: Guid(283730e7cc5aa464aaeb39d42aaed3fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_08.fbx using Guid(283730e7cc5aa464aaeb39d42aaed3fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2534f6b75e329a851f2dda041f44c8b1') in 0.018787 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_03.fbx
-  artifactKey: Guid(ef0aed7c35488ee49923e212281aa13c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_03.fbx using Guid(ef0aed7c35488ee49923e212281aa13c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f6cad38e6fcba92d70ccad94dceecf8') in 0.018696 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000413 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_06.fbx
-  artifactKey: Guid(b3aab1bef66269a41805c9731658f856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_06.fbx using Guid(b3aab1bef66269a41805c9731658f856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e257df78182f81b5f80b91c0d8d9e57') in 0.020655 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000290 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_09.fbx
-  artifactKey: Guid(bdff58a64589cf9429cf2c3738e2cfad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_09.fbx using Guid(bdff58a64589cf9429cf2c3738e2cfad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bda543675f390b019d2fa8e94e601d5') in 0.019310 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000250 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_12.fbx
-  artifactKey: Guid(be78b7ff64f3c154b8c277ee59bb79e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_12.fbx using Guid(be78b7ff64f3c154b8c277ee59bb79e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3436de29fa3f764e7f7e6a7eefb3c0f') in 0.021278 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000476 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_02.fbx
-  artifactKey: Guid(9d86fadb112033341a5bb9bc61d89362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_02.fbx using Guid(9d86fadb112033341a5bb9bc61d89362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa19421e15d691f778bbba97bacfc1b7') in 0.018549 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000320 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_04.fbx
-  artifactKey: Guid(92aea1770c0079c4798aab6047122de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_04.fbx using Guid(92aea1770c0079c4798aab6047122de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '256af2c42f87f4e4f60e549980538e15') in 0.019431 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_11.fbx
-  artifactKey: Guid(6534b5af170fcc24aacae0447aee1a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_11.fbx using Guid(6534b5af170fcc24aacae0447aee1a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6368133bf3ed94c8cedcfd0aedd2edb') in 0.021264 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000235 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_07.fbx
-  artifactKey: Guid(c0604c114f0ecb14a840e23580661e16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_07.fbx using Guid(c0604c114f0ecb14a840e23580661e16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7faba64138e95cb280866dab0d9f913') in 0.019784 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 72.419020 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_01.fbx
-  artifactKey: Guid(1e3bd3d5832a6b54a918ea973d056af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_01.fbx using Guid(1e3bd3d5832a6b54a918ea973d056af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73b28aa03d555e7dfab33f3f986b50f3') in 0.006192 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 90.754688 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_01.fbx
-  artifactKey: Guid(1e3bd3d5832a6b54a918ea973d056af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_01.fbx using Guid(1e3bd3d5832a6b54a918ea973d056af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '518e73c938ff8925c095f711edaf40b7') in 0.006026 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.707940 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_01.fbx
-  artifactKey: Guid(1e3bd3d5832a6b54a918ea973d056af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_01.fbx using Guid(1e3bd3d5832a6b54a918ea973d056af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9006faeb0c94496f80d45b0ca7dffa4b') in 0.016574 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 29.681657 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/07_Walks/07_01.fbx
-  artifactKey: Guid(1e3bd3d5832a6b54a918ea973d056af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/07_Walks/07_01.fbx using Guid(1e3bd3d5832a6b54a918ea973d056af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ea9a7fc84e69df2a594f8b112ed0449') in 0.006427 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 149.343891 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/08_Walks/08_01.fbx
-  artifactKey: Guid(688a86c10d585604bb84f8d06475655c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/08_Walks/08_01.fbx using Guid(688a86c10d585604bb84f8d06475655c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '819394648b723da7b164aef0b813f80b') in 0.020088 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/08_Walks/08_04.fbx
-  artifactKey: Guid(ae89ab30d529ad84282fa1fe648983c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/08_Walks/08_04.fbx using Guid(ae89ab30d529ad84282fa1fe648983c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2217f9684fc517ee434140293fbb45b7') in 0.019037 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000404 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/08_Walks/08_11.fbx
-  artifactKey: Guid(f2e7a11f36a7b4d45ada623317a59b6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/08_Walks/08_11.fbx using Guid(f2e7a11f36a7b4d45ada623317a59b6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bda9e696724044d9827504e81fe0ed9') in 0.019046 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000275 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/08_Walks/08_05.fbx
-  artifactKey: Guid(5b0e26c2ad0702940a3ab2befc5590c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/08_Walks/08_05.fbx using Guid(5b0e26c2ad0702940a3ab2befc5590c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21c41892ac4eb847687bad83cf5e92b7') in 0.016761 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/08_Walks/08_08.fbx
-  artifactKey: Guid(1364e47c738a48e4ea1a10c1430eb1f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/08_Walks/08_08.fbx using Guid(1364e47c738a48e4ea1a10c1430eb1f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ac771df3f3563851a727ed5b984256f') in 0.017928 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000341 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/08_Walks/08_07.fbx
-  artifactKey: Guid(d59fca6c89a269f4f8b30c328035fcb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/08_Walks/08_07.fbx using Guid(d59fca6c89a269f4f8b30c328035fcb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b43dd5c8fa430a96e4030b34f25989b') in 0.018381 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000338 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/08_Walks/08_09.fbx
-  artifactKey: Guid(77d11852627e3bc49ad9e6dabcf89d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/08_Walks/08_09.fbx using Guid(77d11852627e3bc49ad9e6dabcf89d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '923782f7ec4b20cd3aed255f065f89d6') in 0.017827 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000292 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/08_Walks/08_06.fbx
-  artifactKey: Guid(949896324e91dc848a748ab0c01019c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/08_Walks/08_06.fbx using Guid(949896324e91dc848a748ab0c01019c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c71911ff2355c3dd5759d9e8bfc524c') in 0.019586 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/08_Walks/08_02.fbx
-  artifactKey: Guid(fc98ce09967e5704e99e7bc8764dbdd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/08_Walks/08_02.fbx using Guid(fc98ce09967e5704e99e7bc8764dbdd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f9846c7087bbfffbbb4797952ed073a') in 0.020048 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000295 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/08_Walks/08_03.fbx
-  artifactKey: Guid(312909d833ecd7048884446f4bd7fb49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/08_Walks/08_03.fbx using Guid(312909d833ecd7048884446f4bd7fb49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23394e6abd759638a1c8c1269dda0b15') in 0.020005 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000512 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/08_Walks/08_10.fbx
-  artifactKey: Guid(28b0ae60cba98b7499d2184f54c9d6ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/08_Walks/08_10.fbx using Guid(28b0ae60cba98b7499d2184f54c9d6ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92a6932948ed3baaa70b6794cd62457e') in 0.021857 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.289620 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/12_FemWalks and Waterbending/12_01.fbx
-  artifactKey: Guid(bf454ec96d824f3498832b1dd6758689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/12_FemWalks and Waterbending/12_01.fbx using Guid(bf454ec96d824f3498832b1dd6758689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7945950c68bbd4a1c908e5a50e8d206f') in 0.022023 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/12_FemWalks and Waterbending/12_03.fbx
-  artifactKey: Guid(aded8f5ec1abf3b42a3c5429cb9fd608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/12_FemWalks and Waterbending/12_03.fbx using Guid(aded8f5ec1abf3b42a3c5429cb9fd608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00f96c3dfe9c01ea8bbd375764ad5df1') in 0.017439 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000303 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/12_FemWalks and Waterbending/12_02.fbx
-  artifactKey: Guid(ebdb3443069b53e4e87aa48a526472e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/12_FemWalks and Waterbending/12_02.fbx using Guid(ebdb3443069b53e4e87aa48a526472e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd7cece91b09a9d37471781b75a816bc') in 0.018468 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000419 seconds.
-  path: Assets/Huge Mocap Library/mocap animations/12_FemWalks and Waterbending/12_04.fbx
-  artifactKey: Guid(35f5a4be5c6634f41b1959e259ae5b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Huge Mocap Library/mocap animations/12_FemWalks and Waterbending/12_04.fbx using Guid(35f5a4be5c6634f41b1959e259ae5b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ba257f6e76e8333116d15eafc898cd7') in 0.038238 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 408.855953 seconds.
-  path: Assets/Materials/George_N.png
-  artifactKey: Guid(0bb6c0ecea81f9346a96ac968d37b2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/George_N.png using Guid(0bb6c0ecea81f9346a96ac968d37b2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80b5997011a6861f5bd548b93b4473f8') in 0.020348 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 210.214880 seconds.
-  path: Assets/Materials/Breathing Idle.fbx
-  artifactKey: Guid(1f6ceb919480ea64b9f45088020df494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Breathing Idle.fbx using Guid(1f6ceb919480ea64b9f45088020df494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e305d78f8653b6d0dc877362087ef833') in 0.018879 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.211325 seconds.
-  path: Assets/Materials/Breathing Idle.fbx
-  artifactKey: Guid(1f6ceb919480ea64b9f45088020df494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Breathing Idle.fbx using Guid(1f6ceb919480ea64b9f45088020df494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac33903fb40d017908e55baf000193a1') in 0.007762 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 27.194320 seconds.
-  path: Assets/Materials/Breathing Idle.fbx
-  artifactKey: Guid(1f6ceb919480ea64b9f45088020df494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Breathing Idle.fbx using Guid(1f6ceb919480ea64b9f45088020df494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5feb0f04ef3ea050ad5198e4cdd3eb28') in 0.007398 seconds 
+  artifactKey: Guid(f6902cc19463511479e1b7cc4eb12401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Character/George_.controller using Guid(f6902cc19463511479e1b7cc4eb12401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4634f71c7f3af71f3cdeb7a7035eb07c') in 0.014148 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 209.785285 seconds.
+  path: Assets/Materials/Character/George_.controller
+  artifactKey: Guid(f6902cc19463511479e1b7cc4eb12401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Character/George_.controller using Guid(f6902cc19463511479e1b7cc4eb12401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a814c50008268d276daa838c23a4c968') in 0.010785 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.997585 seconds.
+  path: Assets/Materials/Character/George_.controller
+  artifactKey: Guid(f6902cc19463511479e1b7cc4eb12401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Character/George_.controller using Guid(f6902cc19463511479e1b7cc4eb12401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fb9168da18594ef9a8dd83268079e54') in 0.011380 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005884 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.635 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.1 MB.
+System memory in use after: 138.3 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3755.
+Total: 22.760200 ms (FindLiveObjects: 0.317400 ms CreateObjectMapping: 0.200000 ms MarkObjects: 22.189100 ms  DeleteObjects: 0.052500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008286 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.708 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.1 MB.
+System memory in use after: 138.3 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3758.
+Total: 25.198900 ms (FindLiveObjects: 0.245900 ms CreateObjectMapping: 0.166700 ms MarkObjects: 24.686900 ms  DeleteObjects: 0.097100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008784 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.695 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.1 MB.
+System memory in use after: 138.3 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3761.
+Total: 28.061000 ms (FindLiveObjects: 0.500200 ms CreateObjectMapping: 0.338400 ms MarkObjects: 27.171700 ms  DeleteObjects: 0.049200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 150.533825 seconds.
+  path: Assets/PlayerInput.inputactions
+  artifactKey: Guid(c09a2a65fa80bfe4da6c29c30fd4cc74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerInput.inputactions using Guid(c09a2a65fa80bfe4da6c29c30fd4cc74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9120299dccfd2d0391bc05f26ade6e1e') in 0.051490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.146347 seconds.
+  path: Assets/InputExtensions.cs
+  artifactKey: Guid(828c40b61077cd24ea05194b27b688f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InputExtensions.cs using Guid(828c40b61077cd24ea05194b27b688f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c730604c2aefdc81d91e3755331c41f7') in 0.011034 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006273 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.638 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3083 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.1 MB.
+System memory in use after: 138.3 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3765.
+Total: 21.593300 ms (FindLiveObjects: 0.257700 ms CreateObjectMapping: 0.149100 ms MarkObjects: 21.129900 ms  DeleteObjects: 0.055100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006470 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.633 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.87 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3083 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.1 MB.
+System memory in use after: 138.3 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3768.
+Total: 28.948100 ms (FindLiveObjects: 0.336600 ms CreateObjectMapping: 0.159500 ms MarkObjects: 28.393300 ms  DeleteObjects: 0.054600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 382.324965 seconds.
+  path: Assets/InputExtensions.cs
+  artifactKey: Guid(828c40b61077cd24ea05194b27b688f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InputExtensions.cs using Guid(828c40b61077cd24ea05194b27b688f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '671bbc2c3a98f1302aca582621fbcecd') in 0.007020 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007091 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\zorg-\source\repos\Baka_NicosApartment\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.735 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3083 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.2 MB.
+System memory in use after: 138.4 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3771.
+Total: 27.517500 ms (FindLiveObjects: 0.320200 ms CreateObjectMapping: 0.154600 ms MarkObjects: 26.943600 ms  DeleteObjects: 0.097400 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

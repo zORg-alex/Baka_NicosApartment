@@ -57,6 +57,38 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ScreenPointer"",
+                    ""type"": ""Value"",
+                    ""id"": ""b793a0b4-cfe8-4da5-88fc-4ef0a5233bb8"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Accept"",
+                    ""type"": ""Button"",
+                    ""id"": ""30e58e82-0a2b-401a-9b09-057a30eb18bc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Alternative"",
+                    ""type"": ""Button"",
+                    ""id"": ""5ba2e466-e8c3-4f58-8d57-380b95c940e5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Back"",
+                    ""type"": ""Button"",
+                    ""id"": ""6ba2d9e0-008e-4a06-96af-95b208de027d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -158,6 +190,50 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""24f2946a-f91d-4e32-9831-d2ed64d831e4"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ScreenPointer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b321b7af-88ef-485b-89ae-24e3f9903015"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Accept"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""202e309e-f097-4fcc-b8e8-b640ba657dac"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Alternative"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c6a56ffd-2629-4063-9083-90531e3c5cbc"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Back"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -171,6 +247,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_Player_Careful = m_Player.FindAction("Careful", throwIfNotFound: true);
         m_Player_Use = m_Player.FindAction("Use", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_ScreenPointer = m_Player.FindAction("ScreenPointer", throwIfNotFound: true);
+        m_Player_Accept = m_Player.FindAction("Accept", throwIfNotFound: true);
+        m_Player_Alternative = m_Player.FindAction("Alternative", throwIfNotFound: true);
+        m_Player_Back = m_Player.FindAction("Back", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -225,6 +305,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Careful;
     private readonly InputAction m_Player_Use;
     private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_ScreenPointer;
+    private readonly InputAction m_Player_Accept;
+    private readonly InputAction m_Player_Alternative;
+    private readonly InputAction m_Player_Back;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -234,6 +318,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @Careful => m_Wrapper.m_Player_Careful;
         public InputAction @Use => m_Wrapper.m_Player_Use;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @ScreenPointer => m_Wrapper.m_Player_ScreenPointer;
+        public InputAction @Accept => m_Wrapper.m_Player_Accept;
+        public InputAction @Alternative => m_Wrapper.m_Player_Alternative;
+        public InputAction @Back => m_Wrapper.m_Player_Back;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -258,6 +346,18 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @ScreenPointer.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnScreenPointer;
+                @ScreenPointer.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnScreenPointer;
+                @ScreenPointer.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnScreenPointer;
+                @Accept.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAccept;
+                @Accept.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAccept;
+                @Accept.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAccept;
+                @Alternative.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAlternative;
+                @Alternative.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAlternative;
+                @Alternative.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAlternative;
+                @Back.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBack;
+                @Back.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBack;
+                @Back.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBack;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -277,6 +377,18 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @ScreenPointer.started += instance.OnScreenPointer;
+                @ScreenPointer.performed += instance.OnScreenPointer;
+                @ScreenPointer.canceled += instance.OnScreenPointer;
+                @Accept.started += instance.OnAccept;
+                @Accept.performed += instance.OnAccept;
+                @Accept.canceled += instance.OnAccept;
+                @Alternative.started += instance.OnAlternative;
+                @Alternative.performed += instance.OnAlternative;
+                @Alternative.canceled += instance.OnAlternative;
+                @Back.started += instance.OnBack;
+                @Back.performed += instance.OnBack;
+                @Back.canceled += instance.OnBack;
             }
         }
     }
@@ -288,5 +400,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnCareful(InputAction.CallbackContext context);
         void OnUse(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnScreenPointer(InputAction.CallbackContext context);
+        void OnAccept(InputAction.CallbackContext context);
+        void OnAlternative(InputAction.CallbackContext context);
+        void OnBack(InputAction.CallbackContext context);
     }
 }

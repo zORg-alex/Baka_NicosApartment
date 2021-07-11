@@ -1093,6 +1093,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6d7c80d4615d5d14b8fe9905d7933f21, type: 3}
   m_PrefabInstance: {fileID: 77140802}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &745544478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745544477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b47d4537b24704b8c22fd21c8964cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &745544479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,89 +1117,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 745544477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7350a514e314e49a23624908467dec, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fe3c6f7bd167e54588de959c5d1edab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftClick:
-    m_Name: Left Click
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 582a6318-7556-4e54-b7fe-5306b17a43a7
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 66783f71-be36-42c9-b85b-0d95d449cdb0
-      m_Path: <Mouse>/leftButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Left Click
-      m_Flags: 0
-  rightClick:
-    m_Name: Right Click
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 6cb6ce19-79ad-4f58-9515-fcf8c9ea17e9
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 91a21755-9ee3-4a47-a932-abddfc68844b
-      m_Path: <Mouse>/rightButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Right Click
-      m_Flags: 0
-  middleClick:
-    m_Name: Middle Click
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: ca236b4c-f8f1-468d-8562-99f8e5e13094
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: d849fc4c-d5c2-4978-94a6-59744251bf9a
-      m_Path: <Mouse>/middleButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Middle Click
-      m_Flags: 0
-  mousePos:
-    m_Name: Mouse Pos
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 5f750761-3aef-48ae-8119-bd31e4ac198e
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-  LeftClick: 0
-  LongLeftClick: 0
-  LongLeftHold: 0
-  LeftClickNDdrag: 0
-  clickedObject: {fileID: 0}
-  First: 0
---- !u!114 &745544480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745544477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80124313d6dca7445b3a275c3e157eaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mouse: {fileID: 745544479}
-  turnSmoothing: 15
-  speedDampTime: 0.1
-  runSpeed: 2
-  walkSpeed: 0.5
-  dist: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
