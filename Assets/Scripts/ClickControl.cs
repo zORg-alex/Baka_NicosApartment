@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using static HiddenMonoBehaviours;
 
-public class ClickControl : AssemblyReloadableMonoBehaviour, IOnMouseClick
+public class ClickControl : Utils.AssemblyReloadableMonoBehaviour, IOnMouseClick
 {
 	private PlayerInput input;
 
