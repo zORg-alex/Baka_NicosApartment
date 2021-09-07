@@ -27,8 +27,4 @@ public static partial class Utils {
 		/// </summary>
 		internal Action Initialize;
 	}
-
-
-	public static float DistanceTo(this Vector3 vector1, Vector3 vector2) =>
-		Vector3.Distance(vector1, vector2);
 }

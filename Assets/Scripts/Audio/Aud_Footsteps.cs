@@ -20,13 +20,12 @@ public class Aud_Footsteps : MonoBehaviour {
 		RaycastHit hit;
 		ClipField[] curClip = Footsteps_wood;
 		if (Physics.Raycast(transform.position+Vector3.up,Vector3.down, out hit)){
-			if (hit.transform.name == "Floor") curClip = Footsteps_wood;
+			//if (hit.transform.name == "Floor") curClip = Footsteps_wood;
 			if (hit.transform.name == "Carpet") curClip = Footsteps_carpet;
 			//zzz = hit.transform.tag;
 		}
 		int i = Random.Range(0,curClip.Length);
-		if (curClip[i].strength>strength) i = Random.Range(0,curClip.Length);
-		if (curClip[i].strength>strength) i = Random.Range(0,curClip.Length);//woops too loud clip//TODO
+		//if (curClip[i].strength>strength) i = Random.Range(0,curClip.Length);
 
 		//if (strength > curClip[i].strength) 
 		float mult = strength/curClip[i].strength;

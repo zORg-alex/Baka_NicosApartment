@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ClickControl : Utils.AssemblyReloadableMonoBehaviour, IOnMouseClick
+public class ClickControl : MonoBehaviour, IOnMouseClick
 {
 	private PlayerInput input;
 
@@ -11,23 +11,26 @@ public class ClickControl : Utils.AssemblyReloadableMonoBehaviour, IOnMouseClick
 	public Vector3 MouseOverPoint { get; private set; }
 	public UnityEvent<ClickControl> OnClick;
 
-	public ClickControl() {
-		Initialize = Init;
+	private void OnEnable() {
+		input = new PlayerInput();
+		input.Player.Accept.Enable();
+		input.Player.Accept.performed += Click;
 	}
 
-	private void Init() {
-		input = new PlayerInput();
-		input.Enable();
-		input.Player.Accept.performed += e => {
-			if (enabled) {
-				if (Physics.Raycast(Camera.main.ScreenPointToRay(input.Player.ScreenPointer.ReadVector2()), out var hit)) {
-					if (hit.collider != null) {
-						MouseOverObject = hit.transform;
-						MouseOverPoint = hit.point;
-					}
+	private void Click(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+		if (enabled) {
+			if (Physics.Raycast(Camera.main.ScreenPointToRay(input.Player.ScreenPointer.ReadVector2()), out var hit)) {
+				if (hit.collider != null) {
+					MouseOverObject = hit.transform;
+					MouseOverPoint = hit.point;
 				}
 			}
-		};
+		}
+	}
+
+	private void OnDisable() {
+		input.Player.Accept.Disable();
+		input.Player.Accept.performed -= Click;
 	}
 }
 

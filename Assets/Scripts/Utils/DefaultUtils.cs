@@ -56,4 +56,6 @@ public static class DefaultUtils {
 
 	public static float DistanceTo(this Vector3 vector1, Vector3 vector2) =>
 		Vector3.Distance(vector1, vector2);
+
+	public static Color MultiplyAlpha(this Color c, float alpha) => new Color(c.r, c.g, c.b, c.a * alpha);
 }
