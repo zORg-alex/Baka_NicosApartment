@@ -22,7 +22,7 @@ public static class DefaultUtils {
 	/// </summary>
 	/// <param name="v"></param>
 	/// <returns></returns>
-	public static Vector3 Invert(this Vector3 v) => Vector3.one - v;
+	public static Vector3 OneMinus(this Vector3 v) => Vector3.one - v;
 
 	public enum Direction { up, down, right, left, forward, back }
 	/// <summary>
@@ -49,6 +49,8 @@ public static class DefaultUtils {
 				return Vector3.one;
 		}
 	}
+	public enum Axis { X, Y, Z }
+	public static Vector3 Invert(this Vector3 v, Axis axis) => new Vector3((axis == Axis.X ? -1 : 1) * v.x, (axis == Axis.Y ? -1 : 1) * v.y, (axis == Axis.Z ? -1 : 1) * v.z);
 	/// <summary>
 	/// Returns new vector with y = 0
 	/// </summary>
