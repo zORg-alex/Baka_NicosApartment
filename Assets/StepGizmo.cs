@@ -6,22 +6,24 @@ using UnityEngine;
 
 public class StepGizmo : MonoBehaviour
 {
-	public Shape points;
-	public int steps;
-	public float strideLength;
-	public float strideWidth;
+	public Shape points = new Shape();
+	public int steps = 4;
+	public float strideLength = .7f;
+	public float strideWidth = .2f;
 	public Quaternion strideRotationOffset;
-	public float curvatureDegrees;
-	public bool draw;
+	public float curvatureDegrees = 0f;
+	public bool draw = true;
 	public enum Side { Right, Left }
-	public Side startWith;
+	public Side startWith = Side.Right;
+	public float pelvisHeight = .82f;
+	public float headHeight = 1.5f;
 	private void OnDrawGizmos() {
-		Gizmos.color = Color.yellow.MultiplyAlpha(.3f);
 		if (!draw) return;
 		Vector3 pointPos = transform.position;
 		Quaternion pointRot = transform.rotation;
 		Quaternion stepCurvature = Quaternion.Euler(0,curvatureDegrees/steps,0);
 		for (int i = 0; i < steps; i++) {
+			Gizmos.color = Color.yellow.MultiplyAlpha(.3f);
 			var mirrored = (startWith == Side.Right ? i : i + 1) % 2 > 0;
 			pointRot *= stepCurvature;
 			var stepPos = pointPos + (pointRot * Vector3.right) * strideWidth / 2 * (mirrored ? -1 : 1);
@@ -38,7 +40,14 @@ public class StepGizmo : MonoBehaviour
 				}
 				Gizmos.DrawLine(stepPos + pointRot * p1, stepPos + pointRot * p2);
 			}
+			var prevPointPos = pointPos;
 			pointPos += pointRot * Vector3.forward * strideLength;
+			Gizmos.DrawLine(prevPointPos, pointPos);
+			Gizmos.color = new Color(.3f, .3f, 1, .3f);
+			Gizmos.DrawLine(prevPointPos + transform.up * pelvisHeight, pointPos + transform.up * pelvisHeight);
+			Gizmos.DrawLine(prevPointPos + transform.up * (pelvisHeight-.1f), prevPointPos + transform.up * (pelvisHeight+.1f));
+			Gizmos.color = new Color(.3f, 1, .3f, .3f);
+			Gizmos.DrawLine(prevPointPos + transform.up * headHeight, pointPos + transform.up * headHeight);
 		}
 	}
 

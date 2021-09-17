@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -44,8 +45,10 @@ public class CopyRotation : MonoBehaviour {
 	}
 
 	private void OnDisable() {
-		if(!Application.isPlaying)
-			StartCoroutine(RestoreTransform());
+		if (!Application.isPlaying || !isActiveAndEnabled)
+			try {
+				StartCoroutine(RestoreTransform());
+			} catch (Exception e) { }
 	}
 
 	private IEnumerator RestoreTransform() {
