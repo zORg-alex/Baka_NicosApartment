@@ -45,7 +45,7 @@ public class CopyRotation : MonoBehaviour {
 	}
 
 	private void OnDisable() {
-		if (!Application.isPlaying || !isActiveAndEnabled)
+		if (!Application.isPlaying && isActiveAndEnabled)
 			try {
 				StartCoroutine(RestoreTransform());
 			} catch (Exception e) { }

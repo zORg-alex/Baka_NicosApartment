@@ -10,6 +10,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Aud_Footsteps))]
 [ExecuteInEditMode]
+[SelectionBase]
 public class GeorgeAnimationControllerScript : MonoBehaviour {
 	public PlayerInput input;
 
@@ -66,10 +67,12 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 		do {
 			turn = GetTurnVal();
 			yield return null;
-		} while (Mathf.Abs(turn) > maxSlightTurn);
+		} while (turn.Abs() > maxSlightTurn);
 
 		Debug.Log($"Turn finished, GetTurnVal() : {GetTurnVal()}");
 		SetTurnAngle();
+		_gizmoTransforms.Add((transform.position, transform.rotation));
+		currentTurnCoroutine = null;
 	}
 
 	private float SetTurnAngle(float? ang = null) {
@@ -84,6 +87,7 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	}
 
 	private void RestartTurning() {
+		_gizmoTransforms.Add((transform.position, transform.rotation));
 		if (currentTurnCoroutine != null)
 			StopCoroutine(currentTurnCoroutine);
 		currentTurnCoroutine = TurnUpdate();
@@ -100,24 +104,26 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	private void Update() {
 		if (ignoreInput) return;
 		if (agentAtDestination && agentMoving) {
+			_gizmoTransforms.Add((transform.position, transform.rotation));
 			Debug.Log($"Target reached, stopping");
 			anim.SetBool(Walk, false);
+			StartLerpSpeedTo(0f, .1f);
 			SetTurnAngle(0);
 			agentMoving = false;
 		}
 
 		if (oldTarget != agent.steeringTarget) {
+			_gizmoPoints.Add(agent.steeringTarget);
 			if (!agentAtDestination) {
 				Debug.Log($"New target, start moving, GetTurnVal() : {GetTurnVal()}");
 				RestartTurning();
 				anim.SetBool(Walk, true);
-				anim.SetFloat(Speed, 1.5f);
 				agentMoving = true;
 			}
 			oldTarget = agent.steeringTarget;
 		}
 
-		if (agentMoving && currentTurnCoroutine == null && GetTurnVal() > maxSlightTurn) {
+		if (agentMoving && currentTurnCoroutine == null && GetTurnVal().Abs() > maxSlightTurn) {
 			Debug.Log($"agentMoving && notTurning && GetTurnVal() : {GetTurnVal()}");
 			RestartTurning();
 		} 
@@ -137,31 +143,60 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 		Gizmos.color = Color.yellow.MultiplyAlpha(.7f);
 		Gizmos.DrawLine(transform.position, agent.steeringTarget);
 		Gizmos.color = Color.blue.MultiplyAlpha(.7f);
-		Gizmos.DrawLine(transform.position, transform.TransformPoint(transform.forward));
+		Gizmos.DrawLine(transform.position, transform.position + transform.forward * .3f);
 		Gizmos.color = new Color(1,1,.5f).MultiplyAlpha(.3f);
 		Gizmos.DrawSphere(agent.pathEndPosition, .2f);
 
-		Gizmos.color = Color.magenta.MultiplyAlpha(.3f);
+		Gizmos.color = Color.magenta;
 		foreach (var p in _gizmoPoints) {
-			Gizmos.DrawCube(p, Vector3.one * .05f);
+			Gizmos.DrawWireCube(p, Vector3.one * .05f);
 		}
 		foreach (var t in _gizmoTransforms) {
-			Gizmos.color = Color.red.MultiplyAlpha(.3f);
-			Gizmos.DrawLine(t.p, t.r * Vector3.right * .05f);
-			Gizmos.color = Color.green.MultiplyAlpha(.3f);
-			Gizmos.DrawLine(t.p, t.r * Vector3.up * .05f);
-			Gizmos.color = Color.blue.MultiplyAlpha(.3f);
-			Gizmos.DrawLine(t.p, t.r * Vector3.forward * .05f);
+			Gizmos.color = Color.red;
+			Gizmos.DrawLine(t.p, t.p + t.r * Vector3.right * .05f);
+			Gizmos.color = Color.green;
+			Gizmos.DrawLine(t.p, t.p + t.r * Vector3.up * .05f);
+			Gizmos.color = Color.blue;
+			Gizmos.DrawLine(t.p, t.p + t.r * Vector3.forward * .05f);
 		}
 	}
 
 	/// <summary>
 	/// Animations have this, just to clean up the console fro now
 	/// </summary>
-	public void StopTurning() { Debug.Log("Animation signalled for step stop"); }
+	public void StopTurning() {
+		Debug.Log("Animation signalled for step stop");
+		if (agentMoving)
+			StartLerpSpeedTo(1.5f, .2f);
+	}
 
 	[Button]
 	public void TestTurn() {
 		zzz = GetTurnVal();
+	}
+
+	private void StartLerpSpeedTo(float speed, float seconds) {
+		if (currentLerpSpeedTo != null)
+			StopCoroutine(currentLerpSpeedTo);
+		currentLerpSpeedTo = LerpSpeedTo(speed, seconds);
+		StartCoroutine(currentLerpSpeedTo);
+	}
+	private IEnumerator currentLerpSpeedTo;
+	private IEnumerator LerpSpeedTo(float speed, float seconds) {
+		float startSpeed = anim.GetFloat(Speed);
+		if (startSpeed != speed) {
+			Debug.Log($"LerpSpeedTo started Time.time:{Time.time}");
+			float startTime = Time.time;
+			while (startTime + seconds > Time.time) {
+				//Lerp from 0 to speed in given seconds timespan
+				anim.SetFloat(Speed, startSpeed.LerpTo(speed, (Time.time - startTime) / seconds));
+				yield return null;
+			}
+			anim.SetFloat(Speed, speed);
+			currentLerpSpeedTo = null;
+			Debug.Log($"LerpSpeedTo finished Time.time:{Time.time}");
+		} else {
+			Debug.Log($"LerpSpeedTo cancelled, speed is already {startSpeed}");
+		}
 	}
 }

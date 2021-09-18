@@ -30,7 +30,7 @@ public class StretchTo : MonoBehaviour {
 
 #if UNITY_EDITOR
 	private void OnDisable() {
-		if (!Application.isPlaying)
+		if (!Application.isPlaying && isActiveAndEnabled)
 			StartCoroutine(RestoreTransform());
 	}
 

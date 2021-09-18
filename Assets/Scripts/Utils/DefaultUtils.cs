@@ -60,4 +60,9 @@ public static class DefaultUtils {
 		Vector3.Distance(vector1, vector2);
 
 	public static Color MultiplyAlpha(this Color c, float alpha) => new Color(c.r, c.g, c.b, c.a * alpha);
+
+	public static float Abs(this float v) => Math.Abs(v);
+	public static int Abs(this int v) => Math.Abs(v);
+	public static float Deg2Rad(this float v) => v * Mathf.Deg2Rad;
+	public static float Rad2Deg(this float v) => v * Mathf.Rad2Deg;
 }
