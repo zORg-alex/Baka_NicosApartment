@@ -30,6 +30,7 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	/// 90 deg in Animator turn animations
 	/// </summary>
 	public float turn90Deg = 1.5f;
+	public float SharpTurn = 1.5f;
 	public float maxSlightTurn = .5f;
 
 	private void OnEnable() {
@@ -61,12 +62,20 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 			}
 		}
 	}
+
 	private IEnumerator TurnUpdate() {
-		float turn;
+		float turn = GetTurnVal();
+		float oldTurn;
 		SetTurnAngle();
 		do {
-			turn = GetTurnVal();
+			//Ugly, but Oh well... Crutches
+			transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(agent.steeringTarget - transform.position), Time.deltaTime);
 			yield return null;
+			oldTurn = turn;
+			turn = GetTurnVal();
+			if (turn.Abs() > oldTurn.Abs() && turn.Abs() > SharpTurn) {
+				SetTurnAngle();
+			}
 		} while (turn.Abs() > maxSlightTurn);
 
 		Debug.Log($"Turn finished, GetTurnVal() : {GetTurnVal()}");
@@ -75,14 +84,22 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 		currentTurnCoroutine = null;
 	}
 
-	private float SetTurnAngle(float? ang = null) {
-		if (ang == null) ang = GetTurnVal();
-		anim.SetFloat(TurnAngle, ang.Value);
-		return ang.Value;
+	private float SetTurnAngle() => SetTurnAngle(GetTurnVal());
+	private float SetTurnAngle(float ang) {
+		anim.SetFloat(TurnAngle, ang);
+		return ang;
 	}
 
 	private float GetTurnVal() {
-		var ang = Quaternion.FromToRotation(transform.forward, (transform.InverseTransformPoint(agent.steeringTarget).normalized)).eulerAngles.y;
+		var direction = transform.InverseTransformPoint(agent.steeringTarget.Horizontal()).normalized;
+		return ConvertDegAngleToAnimAngle(ConvertDirectionToDegAngle(direction));
+	}
+
+	private float ConvertDirectionToDegAngle(Vector3 direction) {
+		return Quaternion.FromToRotation(Vector3.forward, (direction)).eulerAngles.y;
+	}
+
+	private float ConvertDegAngleToAnimAngle(float ang) {
 		return (ang < 180 ? ang : -360 + ang) / (90 / turn90Deg);
 	}
 
@@ -97,11 +114,33 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	private IEnumerator currentTurnCoroutine;
 
 	public bool agentMoving;
-	public float zzz;
 	public bool ignoreInput;
 
-	public bool agentAtDestination => transform.position.DistanceTo(agent.steeringTarget) < agent.stoppingDistance;
+	public List<Vector3> AgentTargets;
+
+	public float SharpTurnSlowDownDistance = .5f;
+	public float SlowWalkSpeed = .7f;
+
+	public bool NextCornerIsSharp;
+	public bool nextCornerIsSharp() => ConvertDegAngleToAnimAngle(ConvertDirectionToDegAngle(transform.InverseTransformPoint(agent.path.corners[1] - agent.path.corners[0]).normalized)) > SharpTurn;
+
+	/// <returns>[0..1]</returns>
+	public float ProximityToSharpCornerOrEnd() {
+		var lastTargetOrSharpTurn = NextCornerIsSharp;
+		if (agent.steeringTarget == agent.destination) lastTargetOrSharpTurn = true;
+
+		return lastTargetOrSharpTurn ? 1 - transform.position.DistanceTo(agent.steeringTarget) / SharpTurnSlowDownDistance : 0;
+	}
+
+	Vector3 lastSteeringTarget;
+	public bool agentAtDestination => transform.position.DistanceTo(agent.destination) < agent.stoppingDistance;
 	private void Update() {
+		if (agent.steeringTarget != lastSteeringTarget) {
+			//Don't want to update every frame, since it's not going to change drastically
+			NextCornerIsSharp = nextCornerIsSharp();
+		}
+
+		AgentTargets = agent.path.corners.ToList();
 		if (ignoreInput) return;
 		if (agentAtDestination && agentMoving) {
 			_gizmoTransforms.Add((transform.position, transform.rotation));
@@ -126,9 +165,13 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 		if (agentMoving && currentTurnCoroutine == null && GetTurnVal().Abs() > maxSlightTurn) {
 			Debug.Log($"agentMoving && notTurning && GetTurnVal() : {GetTurnVal()}");
 			RestartTurning();
-		} 
+		}
+
+		if (NextCornerIsSharp)
+			anim.SetFloat(Speed, anim.GetFloat(Speed).LerpTo(SlowWalkSpeed, ProximityToSharpCornerOrEnd()));
 
 		agent.nextPosition = transform.position;
+		lastSteeringTarget = agent.steeringTarget;
 	}
 	private List<Vector3> _gizmoPoints = new List<Vector3>();
 	private List<(Vector3 p, Quaternion r)> _gizmoTransforms = new List<(Vector3 p, Quaternion r)>();
@@ -143,10 +186,14 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 		Gizmos.color = Color.yellow.MultiplyAlpha(.7f);
 		Gizmos.DrawLine(transform.position, agent.steeringTarget);
 		Gizmos.color = Color.blue.MultiplyAlpha(.7f);
-		Gizmos.DrawLine(transform.position, transform.position + transform.forward * .3f);
+		Gizmos.DrawLine(transform.position, transform.position + (transform.forward * .3f));
 		Gizmos.color = new Color(1,1,.5f).MultiplyAlpha(.3f);
 		Gizmos.DrawSphere(agent.pathEndPosition, .2f);
-
+		if (currentTurnCoroutine != null) {
+			Gizmos.color = Color.green.MultiplyAlpha(.3f);
+			Gizmos.DrawWireSphere(transform.position, .3f);
+			Gizmos.DrawLine(transform.position, transform.position + Quaternion.LookRotation(transform.InverseTransformPoint(agent.steeringTarget).normalized, transform.up) * transform.forward);
+		}
 		Gizmos.color = Color.magenta;
 		foreach (var p in _gizmoPoints) {
 			Gizmos.DrawWireCube(p, Vector3.one * .05f);
@@ -166,13 +213,9 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	/// </summary>
 	public void StopTurning() {
 		Debug.Log("Animation signalled for step stop");
+		SetTurnAngle();
 		if (agentMoving)
 			StartLerpSpeedTo(1.5f, .2f);
-	}
-
-	[Button]
-	public void TestTurn() {
-		zzz = GetTurnVal();
 	}
 
 	private void StartLerpSpeedTo(float speed, float seconds) {

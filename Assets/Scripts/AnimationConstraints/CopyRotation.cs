@@ -48,7 +48,7 @@ public class CopyRotation : MonoBehaviour {
 		if (!Application.isPlaying && isActiveAndEnabled)
 			try {
 				StartCoroutine(RestoreTransform());
-			} catch (Exception e) { }
+			} catch (Exception) { }
 	}
 
 	private IEnumerator RestoreTransform() {
