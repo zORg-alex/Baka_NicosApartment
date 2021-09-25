@@ -536,18 +536,18 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.6557377
+      - time: 0.37212187
         functionName: Footstep
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 56d1d2f9902c09d4996f2828b8599f25, type: 3}
-        floatParameter: 0
-        intParameter: 1
+        floatParameter: 0.4
+        intParameter: 0
         messageOptions: 0
-      - time: 0.92195123
-        functionName: StopTurning
+      - time: 0.6518058
+        functionName: Footstep
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 7fe3c6f7bd167e54588de959c5d1edab, type: 3}
-        floatParameter: 0
+        objectReferenceParameter: {fileID: 11500000, guid: 56d1d2f9902c09d4996f2828b8599f25, type: 3}
+        floatParameter: 0.4
         intParameter: 0
         messageOptions: 0
       transformMask:
@@ -733,11 +733,18 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.9268293
-        functionName: StopTurning
+      - time: 0.4645598
+        functionName: Footstep
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 7fe3c6f7bd167e54588de959c5d1edab, type: 3}
-        floatParameter: 0
+        objectReferenceParameter: {fileID: 11500000, guid: 56d1d2f9902c09d4996f2828b8599f25, type: 3}
+        floatParameter: 0.4
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9860045
+        functionName: Footstep
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 56d1d2f9902c09d4996f2828b8599f25, type: 3}
+        floatParameter: 0.4
         intParameter: 0
         messageOptions: 0
       transformMask:
@@ -923,26 +930,19 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.92195123
-        functionName: StopTurning
+      - time: 0.5261851
+        functionName: Footstep
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 7fe3c6f7bd167e54588de959c5d1edab, type: 3}
-        floatParameter: 0
+        objectReferenceParameter: {fileID: 11500000, guid: 56d1d2f9902c09d4996f2828b8599f25, type: 3}
+        floatParameter: 0.6
         intParameter: 0
         messageOptions: 0
-      - time: 0.5080215
+      - time: 0.7916478
         functionName: Footstep
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 56d1d2f9902c09d4996f2828b8599f25, type: 3}
-        floatParameter: 0
-        intParameter: 1
-        messageOptions: 0
-      - time: 0.8262032
-        functionName: Footstep
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 56d1d2f9902c09d4996f2828b8599f25, type: 3}
-        floatParameter: 0
-        intParameter: 1
+        floatParameter: 0.6
+        intParameter: 0
         messageOptions: 0
       transformMask:
       - path: 
@@ -1127,25 +1127,25 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.5617887
+      - time: 0.3199774
         functionName: Footstep
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 56d1d2f9902c09d4996f2828b8599f25, type: 3}
-        floatParameter: 0
-        intParameter: 1
+        floatParameter: 0.2
+        intParameter: 0
         messageOptions: 0
-      - time: 0.7587172
+      - time: 0.57832956
         functionName: Footstep
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 56d1d2f9902c09d4996f2828b8599f25, type: 3}
-        floatParameter: 0
-        intParameter: 2
+        floatParameter: 0.6
+        intParameter: 0
         messageOptions: 0
-      - time: 0.92195123
-        functionName: StopTurning
+      - time: 0.7892776
+        functionName: Footstep
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 7fe3c6f7bd167e54588de959c5d1edab, type: 3}
-        floatParameter: 0
+        objectReferenceParameter: {fileID: 11500000, guid: 56d1d2f9902c09d4996f2828b8599f25, type: 3}
+        floatParameter: 0.5
         intParameter: 0
         messageOptions: 0
       transformMask:

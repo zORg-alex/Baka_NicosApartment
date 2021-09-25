@@ -523,7 +523,21 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.40656695
+        functionName: Footstep
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 56d1d2f9902c09d4996f2828b8599f25, type: 3}
+        floatParameter: 1
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.8911963
+        functionName: Footstep
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 56d1d2f9902c09d4996f2828b8599f25, type: 3}
+        floatParameter: 1
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -681,7 +695,7 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 28
     isReadable: 1
   meshes:
     lODScreenPercentages: []
