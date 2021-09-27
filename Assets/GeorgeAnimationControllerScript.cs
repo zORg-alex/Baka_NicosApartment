@@ -45,7 +45,7 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 
 	private void OnEnable() {
 		input = new PlayerInput();
-		input.Player.Accept.performed += Clicked;
+		input.Player.Alternative.performed += Clicked;
 		input.Player.Enable();
 		agent = GetComponent<NavMeshAgent>();
 		agent.updatePosition = false;
@@ -94,14 +94,16 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	/// <summary>
 	/// Turn Coroutine for alligning to a steering target
 	/// </summary>
+	/// <param name="preciseRotation">local rotation</param>
 	private IEnumerator TurnUpdate(Quaternion? preciseRotation = null) {
 		float turn;
 		if (preciseRotation != null) {
-			turn = ConvertDegAngleToAnimAngle((preciseRotation.Value * Quaternion.Inverse(transform.rotation)).eulerAngles.y);
+			turn = ConvertDegAngleToAnimAngle(preciseRotation.Value.eulerAngles.y);
 		} else {
 			turn = GetTurnVal();
 		}
 		float oldTurn;
+		anim.SetBool(Walk, true);
 		SetTurnAngle(turn);
 		if (preciseRotation == null) {
 			do {
@@ -144,7 +146,7 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 		return Quaternion.FromToRotation(Vector3.forward, (direction)).eulerAngles.y;
 	}
 
-	private float ConvertDegAngleToAnimAngle(float ang) {
+	public float ConvertDegAngleToAnimAngle(float ang) {
 		return (ang < 180 ? ang : -360 + ang) / (90 / turn90Deg);
 	}
 
@@ -159,7 +161,11 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 		StartCoroutine(currentTurnCoroutine);
 	}
 
-	private void TurnTo(Quaternion rotation) {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="rotation">local rotation</param>
+	public void TurnTo(Quaternion rotation) {
 		_gizmoTransforms.Add((transform.position, transform.rotation));
 		if (currentTurnCoroutine != null)
 			StopCoroutine(currentTurnCoroutine);
@@ -171,13 +177,22 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	/// <summary>
 	/// Called on last frame in animation clip for turning on spot
 	/// So when we start turning on spot, we can start moving after full turn motion
+	/// <para/> Doing a simple culling for future calls on current frame with <see cref="stoppedTurning"/> bool.
 	/// </summary>
-	public void StopTurning() {
+	public void StopTurning() => stoppedTurning = true;
+	private bool stoppedTurning;
+	public void StopTurningTrigger() {
+		stoppedTurning = false;
+
 		Debug.Log("Animation signalled for step stop "+ (agentAtDestination && currentInteractableTarget != null ? "at destination, have interaction target" : ""));
 		if (currentInteractableTarget == null)
 			SetTurnAngle();
 		if (agentIsMoving)
 			StartLerpSpeedTo(WalkSpeed, .2f);
+		if (agentAtDestination) {
+			anim.SetBool(Walk, false);
+			SetTurnAngle(0f);
+		}
 		if (agentAtDestination && currentInteractableTarget != null) {
 			//Start Interaction
 			//anim.SetBool(currentInteractableTarget.AnimationSetBools, true);
@@ -280,6 +295,7 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	public bool agentAtDestination => transform.position.DistanceTo(agent.destination) < agent.stoppingDistance;
 
 	private void Update() {
+		if (stoppedTurning) StopTurningTrigger();
 		if (agent.steeringTarget != lastSteeringTarget) {
 			//Don't want to update every frame, since it's not going to change drastically
 			NextCornerIsSharp = nextCornerIsSharp();
@@ -296,7 +312,6 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 		if (agentAtDestination && agentIsMoving) {
 			_gizmoTransforms.Add((transform.position, transform.rotation));
 			Debug.Log($"Target reached, stopping");
-			anim.SetBool(Walk, false);
 			StartLerpSpeedTo(0f, .1f);
 			SetTurnAngle(0);
 			agentIsMoving = false;
