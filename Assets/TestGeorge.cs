@@ -26,7 +26,7 @@ public class TestGeorge : MonoBehaviour
 		TestData d;
 		d = new TestData() { supposedRot = rot, animInitialTurn = george.ConvertDegAngleToAnimAngle(angleDeg)};
 		testDataList.Add(d);
-		george.TurnTo(rot);
+		//george.TurnTo(rot);
 		StopAllCoroutines();
 		StartCoroutine(TurnToEnded(d));
 	}

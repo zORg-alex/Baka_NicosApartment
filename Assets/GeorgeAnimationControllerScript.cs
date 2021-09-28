@@ -91,52 +91,6 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 		agent.destination = destination;
 	}
 
-	/// <summary>
-	/// Turn Coroutine for alligning to a steering target
-	/// </summary>
-	/// <param name="preciseRotation">local rotation</param>
-	private IEnumerator TurnUpdate(Quaternion? preciseRotation = null) {
-		float turn;
-		if (preciseRotation != null) {
-			turn = ConvertDegAngleToAnimAngle(preciseRotation.Value.eulerAngles.y);
-		} else {
-			turn = GetTurnVal();
-		}
-		float oldTurn;
-		anim.SetBool(Walk, true);
-		SetTurnAngle(turn);
-		if (preciseRotation == null) {
-			do {
-				//Ugly, but Oh well... Crutches
-				Vector3 newForward = agent.steeringTarget - transform.position;
-				if (newForward.magnitude > .00001f)
-					transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(newForward), Time.deltaTime * 2f);
-				yield return null;
-				oldTurn = turn;
-				turn = GetTurnVal();
-				if (turn.Abs() > oldTurn.Abs() && turn.Abs() > SharpTurn) {
-					SetTurnAngle();
-				}
-			} while (turn.Abs() > maxSlightTurn);
-		} else {
-			do {
-				transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(agent.steeringTarget - transform.position), Time.deltaTime * 5f);
-			} while ((transform.rotation * Quaternion.Inverse( preciseRotation.Value)).eulerAngles.magnitude < 2f);
-		}
-
-		Debug.Log($"Turn finished, GetTurnVal(precise {preciseRotation.HasValue.ToString()}) : {GetTurnVal()}");
-		SetTurnAngle();
-		_gizmoTransforms.Add((transform.position, transform.rotation));
-		currentTurnCoroutine = null;
-	}
-
-	private float SetTurnAngle() => SetTurnAngle(GetTurnVal());
-	private float SetTurnAngle(float ang) {
-		anim.SetFloat(TurnAngle, ang);
-		_VHS_animValues.x = anim.GetFloat(TurnAngle);
-		return ang;
-	}
-
 	private float GetTurnVal() {
 		var direction = transform.InverseTransformPoint(agent.steeringTarget.Horizontal()).normalized;
 		return ConvertDegAngleToAnimAngle(ConvertDirectionToDegAngle(direction));
@@ -151,30 +105,6 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Restarts <see cref="TurnUpdate"/> Coroutine to allign to a steering target
-	/// </summary>
-	private void RestartTurning() {
-		_gizmoTransforms.Add((transform.position, transform.rotation));
-		if (currentTurnCoroutine != null)
-			StopCoroutine(currentTurnCoroutine);
-		currentTurnCoroutine = TurnUpdate();
-		StartCoroutine(currentTurnCoroutine);
-	}
-
-	/// <summary>
-	/// 
-	/// </summary>
-	/// <param name="rotation">local rotation</param>
-	public void TurnTo(Quaternion rotation) {
-		_gizmoTransforms.Add((transform.position, transform.rotation));
-		if (currentTurnCoroutine != null)
-			StopCoroutine(currentTurnCoroutine);
-		currentTurnCoroutine = TurnUpdate(rotation);
-		StartCoroutine(currentTurnCoroutine);
-	}
-
-	private IEnumerator currentTurnCoroutine;
-	/// <summary>
 	/// Called on last frame in animation clip for turning on spot
 	/// So when we start turning on spot, we can start moving after full turn motion
 	/// <para/> Doing a simple culling for future calls on current frame with <see cref="stoppedTurning"/> bool.
@@ -184,92 +114,15 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	public void StopTurningTrigger() {
 		stoppedTurning = false;
 
-		Debug.Log("Animation signalled for step stop "+ (agentAtDestination && currentInteractableTarget != null ? "at destination, have interaction target" : ""));
-		if (currentInteractableTarget == null)
-			SetTurnAngle();
-		if (agentIsMoving)
-			StartLerpSpeedTo(WalkSpeed, .2f);
-		if (agentAtDestination) {
-			anim.SetBool(Walk, false);
-			SetTurnAngle(0f);
-		}
-		if (agentAtDestination && currentInteractableTarget != null) {
-			//Start Interaction
-			//anim.SetBool(currentInteractableTarget.AnimationSetBools, true);
-			StartAllignment(currentInteractableTarget);
-			foreach (var v in currentInteractableTarget.AnimationSetValues.Where(i => i.HasValue(AnimationProperty.Time.EnterBegin))) {
-				v.SetAnimatorValue(anim, AnimationProperty.Time.EnterBegin);
-			}
-		}
-	}
 
-	public void StartAllignment(IInteractable interactable) {
-		if (curretnAllignment != null)
-			StopCoroutine(curretnAllignment);
-		curretnAllignment = Allignment();
-		StartCoroutine(curretnAllignment);
-	}
 
-	private IEnumerator curretnAllignment;
-	bool allowAllignment;
-	float allignmentTime;
-	public void AllowAllignmentFor(float seconds) {
-		allowAllignment = true;
-		allignmentTime = seconds;
-	}
-	public IEnumerator Allignment() {
-		yield return new WaitUntil(()=>allowAllignment);
-		float startTime = Time.time;
-		Vector3 finalPosition = currentInteractableTarget.InteractionEndPoint;
-		Quaternion finalRotation = currentInteractableTarget.InteractionEndRotation;
-		bool done = false;
-		while (!done) {
-			var adjustedTime = (Time.time - startTime < allignmentTime ? Time.time - startTime : allignmentTime);
-			transform.position = transform.position.LerpTo(finalPosition, adjustedTime / allignmentTime);
-			transform.rotation = Quaternion.Lerp(transform.rotation, finalRotation, adjustedTime / allignmentTime);
-			done = Time.time - startTime > allignmentTime;//to finish after time ran out
-			yield return null;
-		}
-
-		curretnAllignment = null;
-		allowAllignment = false;
-	}
-	/// <summary>
-	/// Starts <see cref="LerpSpeedTo(float, float)"/> Coroutine and stops previous
-	/// </summary>
-	/// <param name="speed"></param>
-	/// <param name="seconds"></param>
-	private void StartLerpSpeedTo(float speed, float seconds) {
-		if (currentLerpSpeedTo != null)
-			StopCoroutine(currentLerpSpeedTo);
-		currentLerpSpeedTo = LerpSpeedTo(speed, seconds);
-		StartCoroutine(currentLerpSpeedTo);
-	}
-	private IEnumerator currentLerpSpeedTo;
-	private IEnumerator LerpSpeedTo(float speed, float seconds) {
-		float startSpeed = anim.GetFloat(Speed);
-		if (startSpeed != speed) {
-			Debug.Log($"LerpSpeedTo started Time.time:{Time.time}");
-			float startTime = Time.time;
-			while (startTime + seconds > Time.time) {
-				//Lerp from 0 to speed in given seconds timespan
-				anim.SetFloat(Speed, startSpeed.LerpTo(speed, (Time.time - startTime) / seconds));
-				_VHS_animValues.y = anim.GetFloat(Speed);
-				yield return null;
-			}
-			anim.SetFloat(Speed, speed);
-			_VHS_animValues.y = anim.GetFloat(Speed);
-			currentLerpSpeedTo = null;
-			Debug.Log($"LerpSpeedTo {speed} for {seconds} finished Time.time:{Time.time}");
-		} else {
-			Debug.Log($"LerpSpeedTo cancelled, speed is already {startSpeed}");
-		}
 	}
 
 	/// <summary>
 	/// Set in <see cref="Update"/>
 	/// </summary>
 	public bool agentIsMoving;
+	public bool isTurning;
 	/// <summary>
 	/// Disables <see cref="Update"/>
 	/// </summary>
@@ -299,6 +152,7 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 		if (agent.steeringTarget != lastSteeringTarget) {
 			//Don't want to update every frame, since it's not going to change drastically
 			NextCornerIsSharp = nextCornerIsSharp();
+			lastSteeringTarget = agent.steeringTarget;
 		}
 
 		//Allign character to a terrain height; Raycast from hips to ground
@@ -307,68 +161,8 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 
 
 		if (ignoreInput) return;
-		_VHS_animValues.z = anim.GetBool(Walk) ? 1 : 0;
-		//Stop
-		if (agentAtDestination && agentIsMoving) {
-			_gizmoTransforms.Add((transform.position, transform.rotation));
-			Debug.Log($"Target reached, stopping");
-			StartLerpSpeedTo(0f, .1f);
-			SetTurnAngle(0);
-			agentIsMoving = false;
-			if (currentInteractableTarget != null) {
-				//Rotate towards
-				TurnTo(currentInteractableTarget.InteractionEntryRotation);
-			}
-		}
-
-		//Next target, turn towards, continue walk
-		if (oldTarget != agent.steeringTarget) {
-			_gizmoPoints.Add(agent.steeringTarget);
-			if (!agentAtDestination) {
-				Debug.Log($"New target, start moving, GetTurnVal() : {GetTurnVal()}");
-				RestartTurning();
-				anim.SetBool(Walk, true);
-				agentIsMoving = true;
-			}
-			oldTarget = agent.steeringTarget;
-		}
-
-		//Offcourse, restart Turning
-		if (agentIsMoving && currentTurnCoroutine == null && GetTurnVal().Abs() > maxSlightTurn) {
-			Debug.Log($"Offcourse agentMoving && notTurning && GetTurnVal() : {GetTurnVal()} > {maxSlightTurn}");
-			RestartTurning();
-		}
-
-		//Slowing down
-		if (agentIsMoving && NextCornerIsSharp || agent.steeringTarget == agent.destination) {
-			var slowDownSpeed = agent.steeringTarget == agent.destination ? 0 : SlowWalkSpeed;
-			if (currentSlowDownToByProximity != null && transform.position.DistanceTo(agent.steeringTarget) < SharpTurnSlowDownDistance)
-				StartSlowDownToByProximity(slowDownSpeed);
-		}
 
 		agent.nextPosition = transform.position;
-		lastSteeringTarget = agent.steeringTarget;
-	}
-
-	private void StartSlowDownToByProximity(float slowDownSpeed) {
-		if (currentSlowDownToByProximity != null)
-			StopCoroutine(currentSlowDownToByProximity);
-		currentSlowDownToByProximity = SlowDownToByProximity(slowDownSpeed);
-		StartCoroutine(currentSlowDownToByProximity);
-	}
-	IEnumerator currentSlowDownToByProximity;
-	IEnumerator SlowDownToByProximity(float slowDownSpeed) {
-		Debug.Log($"Slowing down, agent.steeringTarget == agent.destination, speed => {slowDownSpeed}");
-		var proximity = ProximityToSharpCornerOrEnd();
-		while (proximity > .01f) {
-			anim.SetFloat(Speed, anim.GetFloat(Speed).LerpTo(slowDownSpeed, proximity));
-			_VHS_animValues.y = anim.GetFloat(Speed);
-			transform.position = transform.position.LerpTo(agent.steeringTarget, proximity);
-			yield return null;
-		}
-		anim.SetFloat(Speed, slowDownSpeed);
-		_VHS_animValues.y = anim.GetFloat(Speed);
-		currentSlowDownToByProximity = null;
 	}
 
 	/* 
@@ -396,7 +190,7 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 		Gizmos.DrawLine(transform.position, transform.position + (transform.forward * .3f));
 		Gizmos.color = new Color(1,1,.5f).MultiplyAlpha(.3f);
 		Gizmos.DrawSphere(agent.pathEndPosition, .2f);
-		if (currentTurnCoroutine != null) {
+		if (isTurning) {
 			Gizmos.color = Color.green.MultiplyAlpha(.3f);
 			Gizmos.DrawWireSphere(transform.position, .3f);
 			var stt = transform.InverseTransformPoint(agent.steeringTarget).normalized;
