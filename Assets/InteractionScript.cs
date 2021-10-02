@@ -194,6 +194,38 @@ public class AnimationProperty {
 		}
 	}
 
+	public bool GetBoolValue(Time time, out bool value) {
+		value = default;
+		if (valueType == ValueType.Bool) {
+			value = (bool)GetValue(time);
+			return true;
+		}
+		return false;
+	}
+	public bool GetFloatValue(Time time, out float value) {
+		value = default;
+		if (valueType == ValueType.Float) {
+			value = (float)GetValue(time);
+			return true;
+		}
+		return false;
+	}
+	public bool GetIntValue(Time time, out int value) {
+		value = default;
+		if (valueType == ValueType.Integer) {
+			value = (int)GetValue(time);
+			return true;
+		}
+		return false;
+	}
+	public bool GetIntValue(Time time) {
+		if (valueType == ValueType.Trigger) {
+			var value = (bool)GetValue(time);
+			return value;
+		}
+		return false;
+	}
+
 	internal void SetDefault(Time time) {
 		if (valueType == ValueType.Float) SetValue(0, time);
 		else if (valueType == ValueType.Integer) SetValue(0, time);

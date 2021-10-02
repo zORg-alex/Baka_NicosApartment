@@ -1,3 +1,5 @@
+using FIMSpace.Basics;
+using FIMSpace.GroundFitter;
 using Sirenix.OdinInspector;
 using System;
 using System.Collections;
@@ -17,6 +19,7 @@ using UnityEngine.InputSystem;
 /// <see cref="StartLerpSpeedTo(float, float)"/> starts coroutine for speed change <para/>
 /// <see cref="RestartTurning"/> start [again] turning coroutine when need to change angle
 /// </summary>
+[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Aud_Footsteps))]
 [ExecuteInEditMode]
@@ -24,43 +27,89 @@ using UnityEngine.InputSystem;
 public class GeorgeAnimationControllerScript : MonoBehaviour {
 	public PlayerInput input;
 
+	//Values to set Animator propeerties or interpret them. Set in Inspector
+	#region animatorSettingFields
+	/// <summary>
+	/// 90 deg in Animator turn animations
+	/// </summary>
+	[HorizontalGroup("Animator",150)]
+	[FoldoutGroup("Animator/Animator Turn settings"), LabelWidth(100)]
+	public float turn90Deg = 1.5f;
+	[FoldoutGroup("Animator/Animator Turn settings"), LabelWidth(100)]
+	public float SharpTurn = 1.5f;
+	[FoldoutGroup("Animator/Animator Turn settings"), LabelWidth(100)]
+	public float maxSlightTurn = .5f;
+
+	[HorizontalGroup("Animator")]
+	[FoldoutGroup("Animator/Animator Speed settings")]
+	public float WalkSpeed = 1.5f;
+	[FoldoutGroup("Animator/Animator Speed settings")]
+	public float SharpTurnSlowDownDistance = .5f;
+	[FoldoutGroup("Animator/Animator Speed settings")]
+	public float SlowWalkSpeed = .7f;
+	#endregion
+
+	public Vector3 destination;
+	private Vector3 oldTarget;
+
+	private void OnEnable() {
+		SetUpInputActions();
+		IndexAnimParameters();
+		SetUpAnimationClips();
+		SetUpAgent();
+	}
+	private void OnDisable() {
+		input.Player.Accept.performed -= Clicked;
+	}
+
+	public NavMeshAgent agent;
+	
+	private void SetUpAgent() {
+		agent = GetComponent<NavMeshAgent>();
+		agent.updatePosition = true;
+		agent.updateRotation = true;
+		agent.updateUpAxis = true;
+		agent.Warp(transform.position);
+		agent.destination = transform.position;
+	}
+	string _clip_Stand = "Stand";
+	string _clip_Move = "Move";
+	string _clip_Sit_Enter = "Sit_Enter";
+	string _clip_Sit_Exit = "Sit_Exit";
+	FAnimationClips clips;
+
+	private void SetUpAnimationClips() {
+		clips = new FAnimationClips(anim);
+		clips.Add(_clip_Stand);
+		clips.Add(_clip_Move);
+		clips.Add(_clip_Sit_Enter);
+		clips.Add(_clip_Sit_Exit);
+	}
+
+	private void SetUpInputActions() {
+		input = new PlayerInput();
+		input.Player.Alternative.performed += Clicked;
+		input.Player.Enable();
+	}
+
 	Animator anim;
+	#region Animator Properties indexed
 	int Sit;
 	int Walk;
 	int Speed;
 	int Turn;
 	int TurnAngle;
 	int SitMirror;
+	#endregion
 
-	public Vector3 destination;
-	public NavMeshAgent agent;
-	private Vector3 oldTarget;
-
-	/// <summary>
-	/// 90 deg in Animator turn animations
-	/// </summary>
-	public float turn90Deg = 1.5f;
-	public float SharpTurn = 1.5f;
-	public float maxSlightTurn = .5f;
-
-	private void OnEnable() {
-		input = new PlayerInput();
-		input.Player.Alternative.performed += Clicked;
-		input.Player.Enable();
-		agent = GetComponent<NavMeshAgent>();
-		agent.updatePosition = false;
-		agent.updateRotation = false;
+	private void IndexAnimParameters() {
 		anim = GetComponent<Animator>();
-
 		Sit = Animator.StringToHash("Sit");
 		Walk = Animator.StringToHash("Walk");
 		Speed = Animator.StringToHash("Speed");
 		Turn = Animator.StringToHash("Turn");
 		TurnAngle = Animator.StringToHash("TurnAngle");
 		SitMirror = Animator.StringToHash("SitMirror");
-	}
-	private void OnDisable() {
-		input.Player.Accept.performed -= Clicked;
 	}
 
 	private IInteractable currentInteractableTarget;
@@ -111,7 +160,7 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	/// </summary>
 	public void StopTurning() => stoppedTurning = true;
 	private bool stoppedTurning;
-	public void StopTurningTrigger() {
+	public void StopTurningTriggered() {
 		stoppedTurning = false;
 
 
@@ -126,12 +175,7 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	/// <summary>
 	/// Disables <see cref="Update"/>
 	/// </summary>
-	public bool ignoreInput;
-
-	public float WalkSpeed = 1.5f;
-	public float SharpTurnSlowDownDistance = .5f;
-	public float SlowWalkSpeed = .7f;
-
+	/// 
 	public bool NextCornerIsSharp;
 	public bool nextCornerIsSharp() => agent.path.corners.Length > 1 ? ConvertDegAngleToAnimAngle(ConvertDirectionToDegAngle(transform.InverseTransformPoint(agent.path.corners[1] - agent.path.corners[0]).normalized)) > SharpTurn : false;
 
@@ -145,24 +189,96 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	}
 
 	Vector3 lastSteeringTarget;
+
 	public bool agentAtDestination => transform.position.DistanceTo(agent.destination) < agent.stoppingDistance;
+	private float _turnStart;
+	private Quaternion _turnStartRotation;
+	private bool _lookAtTurning;
+	public float turnTIme = .5f;
 
 	private void Update() {
-		if (stoppedTurning) StopTurningTrigger();
+		if (stoppedTurning) StopTurningTriggered();
+
+		//Look at steering target, do it before, so not to do it on time 0
+		if (_lookAtTurning) {
+
+			Vector3 direction = (agent.steeringTarget - transform.position).normalized;
+			if (direction != Vector3.zero) {
+				Quaternion newRotation = Quaternion.Lerp(_turnStartRotation,
+					Quaternion.LookRotation(direction, Vector3.up),
+					Mathf.Min((Time.time - _turnStart) / turnTIme, 1f));
+
+				transform.rotation = newRotation;
+			}
+			if (Time.time > _turnStart + turnTIme) _lookAtTurning = false;
+
+			//Allign character to a terrain height; Raycast from hips to ground
+			//if (!groundFitter.enabled) {
+			//	Physics.Raycast(transform.position + transform.up * .5f, Vector3.down, out var hit, 1f, LayerMask.GetMask("NavigationTargets"));
+			//	transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
+			//}
+		}
+
+		//New target, start turning
 		if (agent.steeringTarget != lastSteeringTarget) {
 			//Don't want to update every frame, since it's not going to change drastically
 			NextCornerIsSharp = nextCornerIsSharp();
 			lastSteeringTarget = agent.steeringTarget;
+
+			_turnStart = Time.time;
+			_turnStartRotation = transform.rotation;
+			_lookAtTurning = (agent.steeringTarget - transform.position).magnitude > .3f;
 		}
 
-		//Allign character to a terrain height; Raycast from hips to ground
-		Physics.Raycast(transform.position + transform.up * .5f, Vector3.down, out var hit, 1f, LayerMask.GetMask("NavigationTargets"));
-		transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
+		//Start moving
+		if (!agentIsMoving && !agentAtDestination) {
+			agentIsMoving = true;
+			clips.CrossFade(_clip_Move, .5f);
+			agent.speed = WalkSpeed;
+		}
+		//Stop moving
+		if (agentIsMoving && agentAtDestination) {
+			agentIsMoving = false;
+			if (currentInteractableTarget != null) {
+				if (currentInteractableTarget.AnimationSetValues.FirstOrDefault()?.name == "Sit") {
+					clips.CrossFade(_clip_Sit_Enter);
+				}
+			} else
+				clips.CrossFade(_clip_Stand, .5f);
+		}
 
+		//Slowing down
+		if (agentIsMoving && NextCornerIsSharp || agent.path.corners.Length == 1) {
+			var slowDownSpeed = agent.path.corners.Length == 1 ? 0 : SlowWalkSpeed;
+			if (currentSlowDownToByProximity != null && transform.position.DistanceTo(agent.steeringTarget) < SharpTurnSlowDownDistance)
+				StartSlowDownToByProximity(slowDownSpeed);
+		}
+		//agent.nextPosition = transform.position;
+		anim.SetFloat(Speed, agent.velocity.magnitude);
+	}
 
-		if (ignoreInput) return;
-
-		agent.nextPosition = transform.position;
+	private void StartSlowDownToByProximity(float slowDownSpeed) {
+		if (currentSlowDownToByProximity != null)
+			StopCoroutine(currentSlowDownToByProximity);
+		currentSlowDownToByProximity = SlowDownToByProximity(slowDownSpeed);
+		StartCoroutine(currentSlowDownToByProximity);
+	}
+	IEnumerator currentSlowDownToByProximity;
+	IEnumerator SlowDownToByProximity(float slowDownSpeed) {
+		Debug.Log($"Slowing down, agent.steeringTarget == agent.destination, speed => {slowDownSpeed}");
+		var exit = false;
+		var corner = agent.steeringTarget;
+		while (!exit) {
+			var proximity = ProximityToSharpCornerOrEnd();
+			anim.SetFloat(Speed, anim.GetFloat(Speed).LerpTo(slowDownSpeed, proximity));
+			_VHS_animValues.y = anim.GetFloat(Speed);
+			transform.position = transform.position.LerpTo(agent.steeringTarget, proximity);
+			exit = proximity < .1f || corner != agent.steeringTarget;
+			yield return null;
+		}
+		agent.speed = slowDownSpeed;
+		_VHS_animValues.y = anim.GetFloat(Speed);
+		currentSlowDownToByProximity = null;
 	}
 
 	/* 
@@ -171,6 +287,7 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	 * ========================================================================================================
 	 */
 
+	[Space(30)]
 	[PlotValue(200,100)]
 	public Vector3 _VHS_animValues = Vector3.zero;
 

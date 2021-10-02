@@ -177,7 +177,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 0
   m_ScreenX: 0.5843251
   m_ScreenY: 0.44952676
-  m_CameraDistance: 2.3
+  m_CameraDistance: 2.96
   m_DeadZoneWidth: 0.25
   m_DeadZoneHeight: 0.26
   m_DeadZoneDepth: 0
@@ -1959,7 +1959,7 @@ MonoBehaviour:
   strideLength: 0.88
   strideWidth: 0.17
   strideRotationOffset: {x: 0, y: 0, z: 0, w: 0}
-  curvatureDegrees: 0
+  curvatureDegrees: 180
   draw: 1
   startWith: 0
   pelvisHeight: 0.91
@@ -1972,7 +1972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350780342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.278, y: 0, z: 0.308}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2159,6 +2159,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e739c23fda3cb742ab9bec06e38bcde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1550511920
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550511917}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.61717296, y: 0.71792907, z: 1.4490036}
+  m_Center: {x: 0.19141352, y: -0.17637166, z: -3.122174e-16}
+--- !u!54 &1550511921
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550511917}
+  serializedVersion: 2
+  m_Mass: 80
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1595415259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,7 +2935,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733478857}
   m_LocalRotation: {x: 0.26368496, y: -0.65610236, z: 0.26368496, w: 0.65610236}
-  m_LocalPosition: {x: 1.7530898, y: 2.4975758, z: 0.702662}
+  m_LocalPosition: {x: 2.2561502, y: 2.9265394, z: 0.62404734}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 92284020}
@@ -2942,7 +2971,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3276923, y: 1}
+    m_SensorSize: {x: 1.3044164, y: 1}
   m_Transitions:
     m_BlendHint: 2
     m_InheritPosition: 0
@@ -4215,23 +4244,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1299601358216403315, guid: 6d7c80d4615d5d14b8fe9905d7933f21, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0098665
+      value: 1.0098662
       objectReference: {fileID: 0}
     - target: {fileID: -1299601358216403315, guid: 6d7c80d4615d5d14b8fe9905d7933f21, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.1691579
+      value: 0.16915792
       objectReference: {fileID: 0}
     - target: {fileID: -1299601358216403315, guid: 6d7c80d4615d5d14b8fe9905d7933f21, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.44717124
+      value: 0.44717118
       objectReference: {fileID: 0}
     - target: {fileID: -1299601358216403315, guid: 6d7c80d4615d5d14b8fe9905d7933f21, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6107626
+      value: 0.61076266
       objectReference: {fileID: 0}
     - target: {fileID: -1299601358216403315, guid: 6d7c80d4615d5d14b8fe9905d7933f21, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.63118356
+      value: -0.63118345
       objectReference: {fileID: 0}
     - target: {fileID: -1278392479257486392, guid: 6d7c80d4615d5d14b8fe9905d7933f21, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4902,9 +4931,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 6d7c80d4615d5d14b8fe9905d7933f21, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 6d7c80d4615d5d14b8fe9905d7933f21, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: f6902cc19463511479e1b7cc4eb12401, type: 2}
+      objectReference: {fileID: 9100000, guid: a58e91e2645b8094ba7c4dd3778a8abd, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 6d7c80d4615d5d14b8fe9905d7933f21, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5933246647454172009, guid: 6d7c80d4615d5d14b8fe9905d7933f21, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.98167026
@@ -5722,18 +5759,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe3c6f7bd167e54588de959c5d1edab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {x: 0, y: 0, z: 0}
-  agent: {fileID: 1969477666}
   turn90Deg: 1.5
   SharpTurn: 1.5
   maxSlightTurn: 0.5
-  agentIsMoving: 0
-  isTurning: 0
-  ignoreInput: 0
   WalkSpeed: 1.5
   SharpTurnSlowDownDistance: 0.5
   SlowWalkSpeed: 0.7
+  destination: {x: 0, y: 0, z: 0}
+  agent: {fileID: 1969477666}
+  agentIsMoving: 1
+  isTurning: 0
   NextCornerIsSharp: 0
+  turnTIme: 0.5
   _VHS_animValues: {x: 0, y: 0, z: 0}
 --- !u!114 &1969477746
 MonoBehaviour:
@@ -5761,38 +5798,120 @@ MonoBehaviour:
   m_GameObject: {fileID: 1969477665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ee822a5a4890d54ca45c0b3957b8606, type: 3}
+  m_Script: {fileID: 11500000, guid: 163d2c8446aa6ae42a718abaa805b8f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FittingSpeed: 6
-  TotalSmoother: 0
-  TransformToRotate: {fileID: 1969477752}
-  GlueToGround: 0
-  MildForwardValue: 0
-  MaxForwardRotation: 90
-  MildHorizontalValue: 0
-  MaxHorizontalRotation: 90
-  RaycastHeightOffset: 0.5
-  RaycastCheckRange: 5
-  LookAheadRaycast: 0
-  AheadBlend: 0.5
-  UpOffset: 0
-  GroundLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  RelativeLookUp: 0
-  RelativeLookUpBias: 0
-  ZoneCast: 0
-  ZoneCastDimensions: {x: 0.3, y: 0.5}
-  ZoneCastOffset: {x: 0, y: 0, z: 0}
-  ZoneCastBias: 0
-  ZoneCastPrecision: 0.25
-  drawDebug: 1
-  HandleRootMotion: 0
-  parentTransform: {fileID: 0}
-  optionalCharContr: {fileID: 0}
-  rootMotionRotation: 1
-  UpdateClock: 0
+  _EditorDrawSetup: 1
+  Leaning:
+    UpdateMode: 0
+    Calibrate: 1
+    SideSwayPower: 0.5
+    ClampSideSway: 25
+    ForwardSwayPower: 0.5
+    BrakeRapidity: 0.75
+    RootBlend: 1
+    FootsOrigin: {fileID: 0}
+    RootRapidity: 0.425
+    RootSideSway: 0.5
+    RootForwardSway: 0.5
+    RootStrafeSway: 0.75
+    RootBrakeSway: 0.5
+    SpineBlend: 0.5
+    ClampSpineSway: 25
+    SpineRapidity: 0.5
+    SpineForwardSway: {x: 5, y: 0, z: 0}
+    SpineSideLean: -0.125
+    SpineRightSway: {x: 0, y: -0.75, z: 1.25}
+    SpineBrakeSway: 0.85
+    StartRunPush: 1
+    NeckCompensation: 0.75
+    ConstantAddRotation: {x: 0, y: 0, z: 0}
+    ArmsBlend: 0.5
+    ArmsSideSway: 0.5
+    ArmsForwardSway: -0.225
+    ObjSpeedWhenBraking: 0.2
+    ObjSpeedWhenRunning: 3
+    AccelerationDetection: 0
+    TryAutoDetectGround: 1
+    UseMuscles: 0
+    MuscleSettings:
+      DesiredPosition: {x: 0, y: 0, z: 0}
+      Acceleration: 10000
+      AccelerationLimit: 5000
+      Damping: 10
+      BrakePower: 0.2
+    AllEffectsBlend: 1
+    GroundAlignBlend: 0
+    GroundAlignRapidity: 0.6
+    AlignOnlyWhenMoving: 0
+    ClampGroundAlign: 25
+    MutiplyGroundAxisRotation: {x: 1, y: 1}
+    AlignAmountOnSpeed:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.3
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    GroundMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    GroundCastLength: 0.2
+    BoxCastSize: 0
+    _UserUseCustomRaycast: 0
+    BaseTransform: {fileID: 1969477752}
+    SpineStart: {fileID: 1969477743}
+    SpineMiddle: {fileID: 1969477742}
+    Chest: {fileID: 1969477741}
+    Neck: {fileID: 1969477740}
+    LeftUpperArm: {fileID: 1969477655}
+    LeftForearm: {fileID: 1969477737}
+    RightUpperArm: {fileID: 1969477652}
+    RightForearm: {fileID: 1969477709}
+    SpineGroundAlign: 0
+    SpineGrAdjustDuration: 0.15
+    SlopeSpineLean:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 10
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 75
+        value: 1.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    AdjustForwAndSide: {x: 1, y: 0.75}
 --- !u!114 &1969477748
 MonoBehaviour:
   m_ObjectHideFlags: 0

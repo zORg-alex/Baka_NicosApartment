@@ -86,6 +86,10 @@ namespace FIMSpace.FEditor
         private static Texture2D __texModls = null;
         public static Texture2D Tex_Limits { get { if (__texLimts != null) return __texLimts; __texLimts = Resources.Load<Texture2D>("Fimp/Icons/FLimits"); return __texLimts; } }
         private static Texture2D __texLimts = null;
+        public static Texture2D Tex_ExportIcon { get { if (_texExportIc != null) return _texExportIc; _texExportIc = Resources.Load<Texture2D>("Fimp/Icons/FExport"); return _texExportIc; } }
+        private static Texture2D _texExportIc = null;
+        public static Texture2D Tex_Load { get { if (__texLoadIc != null) return __texLoadIc; __texLoadIc = Resources.Load<Texture2D>("Fimp/Icons/FLoad"); return __texLoadIc; } }
+        private static Texture2D __texLoadIc = null;
 
         /// Misc Icons ----------------------------------------------------
         public static Texture2D Tex_ArrowUp { get { if (__texArrUp != null) return __texArrUp; __texArrUp = Resources.Load<Texture2D>("Fimp/Misc Icons/FArrowUp"); return __texArrUp; } }

@@ -115,7 +115,7 @@ namespace FIMSpace.GroundFitter
         public Quaternion LastRotation { get; protected set; }
 
         /// <summary> With this variable you define in which direction model should look - use it fro other scripts, check demo script for patrolling")] </summary>
-        internal float UpAxisRotation = 0f;
+        public float UpAxisRotation = 0f;
 
         /// <summary> Quaternion to help controll over transform's rotation when object is placed and rotated to ground </summary>
         protected Quaternion helperRotation = Quaternion.identity;
