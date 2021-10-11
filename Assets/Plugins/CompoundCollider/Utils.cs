@@ -10,7 +10,7 @@ using UnityEngine;
 namespace ZorgsCompoundColliders {
 	public static class Utils {
 		/// <summary>
-		/// Destroys Game Object in Editor or in play
+		/// Destroys Object in Editor or in play
 		/// </summary>
 		public static void Destroy(UnityEngine.Object o) {
 			try {
@@ -22,26 +22,30 @@ namespace ZorgsCompoundColliders {
 					GameObject.Destroy(o);
 				return;
 			} catch (Exception ex) {
-				Debug.LogError($"Exception while deleting GameObject in Utils.Destroy: {ex.Message}");
+				Debug.LogError($"Exception while deleting Object in Utils.Destroy: {ex.Message}");
 			}
 		}
 		/// <summary>
 		/// Destroys Game Objects in Editor or in play
 		/// </summary>
-		public static void Destroy(IEnumerable<Component> Component) {
-			foreach (var comp in Component) {
+		public static void DestroyGameObjects(IEnumerable<Component> Components) {
+			if (Components == null) return;
+
+			foreach (var comp in Components) {
 				Destroy(comp.gameObject);
 			}
 		}
 		/// <summary>
-		/// Destroys Game Objects in Editor or in play
+		/// Destroy Components
 		/// </summary>
-		public static void Destroy(IEnumerable<GameObject> GameObjects) {
-			foreach (var go in GameObjects) {
-				Destroy(go);
+		/// <param name="Components"></param>
+		public static void Destroy(IEnumerable<Component> Components) {
+			if (Components == null) return;
+
+			foreach (var comp in Components) {
+				Destroy(comp);
 			}
 		}
-
 
 		public static T GetValue<T>(this SerializedProperty property) where T : class {
 			object obj = property.serializedObject.targetObject;
@@ -126,6 +130,13 @@ namespace ZorgsCompoundColliders {
 				}
 			}
 			return false;
+		}
+
+		public static Color MultiplyAlpha(this Color c, float alpha) => new Color(c.r, c.g, c.b, c.a * alpha);
+
+		[System.Diagnostics.DebuggerStepThroughAttribute]
+		public static T @IsNull<T>(this T behaviour) where T : MonoBehaviour {
+			return behaviour ? behaviour : null;
 		}
 	}
 }

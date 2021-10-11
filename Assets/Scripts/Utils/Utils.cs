@@ -87,7 +87,7 @@ namespace Utility {
 		}
 		public static void Destroy(IEnumerable<Component> Component) {
 			foreach (var comp in Component) {
-				Destroy(comp.gameObject);
+				Destroy(comp);
 			}
 		}
 		public static void Destroy(IEnumerable<GameObject> GameObjects) {

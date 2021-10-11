@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 
 namespace ZorgsCompoundColliders {
+	[Serializable]
 	public struct Triangle : IEnumerable<Vector3> {
 		public Vector3 v0;
 		public Vector3 v1;
@@ -16,6 +17,14 @@ namespace ZorgsCompoundColliders {
 			}
 		}
 
+		public Vector3[] Vertices() => new Vector3[] {v0, v1, v2};
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="meshIndex">index of original mesh for restoring original state, not used in collider generation</param>
+		/// <param name="vertexes"></param>
+		/// <exception cref="ArgumentException"></exception>
 		public Triangle(int meshIndex, Vector3[] vertexes) {
 			if (vertexes.Count() != 3) throw new ArgumentException("Triangle must be initialized with 3 vertexes.");
 			v0 = vertexes[0];
@@ -32,10 +41,11 @@ namespace ZorgsCompoundColliders {
 		}
 
 		public override int GetHashCode() {
-			int hashCode = -396124428;
+			int hashCode = -606341108;
 			hashCode = hashCode * -1521134295 + v0.GetHashCode();
 			hashCode = hashCode * -1521134295 + v1.GetHashCode();
 			hashCode = hashCode * -1521134295 + v2.GetHashCode();
+			hashCode = hashCode * -1521134295 + meshIndex.GetHashCode();
 			return hashCode;
 		}
 
