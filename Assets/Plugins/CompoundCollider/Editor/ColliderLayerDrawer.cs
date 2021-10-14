@@ -37,14 +37,15 @@ namespace ZorgsCompoundColliders {
 
 			rect.x += rect.width + 5;
 			rect.width = 28;
-			obj.ShowGizmo = !GUI.Button(rect, new GUIContent(obj.ShowGizmo ? eyeTexture : clEyeTexture));
+			if (GUI.Button(rect, new GUIContent(obj.ShowGizmo ? eyeTexture : clEyeTexture)))
+				obj.ShowGizmo = !obj.ShowGizmo;
 
 			rect.x += rect.width + 5;
 			rect.width = 50;
 			if (GUI.Button(rect, new GUIContent(paintbrushtexture)))
 				obj.Paint();
 
-			rect.x += rect.width + 5;//WTF?
+			rect.x += rect.width + 5;
 			rect.width = 50;
 			obj.color = EditorGUI.ColorField(rect, GUIContent.none, obj.color);
 		}

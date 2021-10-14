@@ -2,8 +2,9 @@
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
-[Bb]uilds/
+Logs/shadercompiler*
 Assets/AssetStoreTools*
+Logs/shader*.log
 
 # Visual Studio cache directory
 .vs/

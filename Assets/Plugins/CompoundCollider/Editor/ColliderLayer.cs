@@ -98,7 +98,7 @@ namespace ZorgsCompoundColliders {
 			mesh = null;
 			Parent = zColliderPainterEditorWindow.currentColliderScript;
 			//Painter = zColliderPainterEditorWindow.currentPainter;
-			ShowGizmo = false;
+			ShowGizmo = true;
 		}
 
 		public ColliderLayer(zCollider zCol, int index) {
@@ -109,7 +109,7 @@ namespace ZorgsCompoundColliders {
 			triangles = zCol.layerMeshTriangles[index].ToDictionary(t=>t.GetHashCode(), t=>t);
 			Parent = zColliderPainterEditorWindow.currentColliderScript;
 			//Painter = zColliderPainterEditorWindow.currentPainter;
-			ShowGizmo = false;
+			ShowGizmo = true;
 			UpdateMesh();
 		}
 

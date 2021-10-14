@@ -67,8 +67,12 @@ namespace ZorgsCompoundColliders {
 			};
 			Layerlist.onRemoveCallback += l => currentPainter.RemoveColliderLayer(currentPainter.layers[l.index]);
 
-			Layerlist.drawElementCallback += (rect, ind, act, foc) => 
-			ColliderLayerDrawer.DefaultOnGUI(currentPainter.layers[ind], new Rect(rect.x, rect.y + 2, rect.width, rect.height - 4));
+			Layerlist.drawElementCallback += (rect, ind, act, foc) => {
+				if (IsPainting)
+					ColliderLayerDrawer.DefaultOnGUI(currentPainter.layers[ind], new Rect(rect.x, rect.y + 2, rect.width, rect.height - 4));
+				else
+					EditorGUI.TextField(new Rect(rect.x, rect.y + 2, rect.width, rect.height - 4), ((ColliderLayer)Layerlist.list[ind]).name);
+			};
 			Layerlist.onSelectCallback += l => {
 				currentLayer = currentPainter.layers[l.index];
 			};
@@ -81,6 +85,7 @@ namespace ZorgsCompoundColliders {
 				GUILayout.BeginArea(new Rect(20, 20, 270, Screen.height));
 				{
 					var boxRect = EditorGUILayout.BeginVertical();
+					EditorGUILayout.BeginHorizontal();
 					//GUI.Box(boxRect, GUIContent.none);
 					//Imitate toggle button
 					GUI.color = IsPainting ? Color.red : Color.white;
@@ -90,9 +95,15 @@ namespace ZorgsCompoundColliders {
 					}
 					GUI.color = Color.white;
 
-					if (currentPainter != null) {
+					GUILayout.FlexibleSpace();
+					if (GUILayout.Button("X", GUILayout.Width(22)))
+						ToggleTool();
+
+					EditorGUILayout.EndHorizontal();
+
+					if (currentPainter != null) try {
 						Layerlist?.DoLayoutList();
-					}
+					} catch (Exception e) { }
 
 					EditorGUILayout.EndVertical();
 				}
@@ -123,10 +134,6 @@ namespace ZorgsCompoundColliders {
 					else if (current.type == EventType.KeyUp && current.keyCode == KeyCode.LeftControl)
 						zColliderPainterEditorWindow.SubtractiveMode = false;
 
-					if (zColliderPainterEditorWindow.SubtractiveMode)
-						EditorGUIUtility.AddCursorRect(SceneView.lastActiveSceneView.position, MouseCursor.ArrowMinus);
-					else
-						EditorGUIUtility.AddCursorRect(SceneView.lastActiveSceneView.position, MouseCursor.ArrowPlus);
 				}
 			}
 			currentPainter.IsNull()?.SetDrawGizmos(IsPainting);
