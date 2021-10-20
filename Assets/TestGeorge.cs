@@ -26,13 +26,14 @@ public class TestGeorge : MonoBehaviour
 		TestData d;
 		d = new TestData() { supposedRot = rot, animInitialTurn = george.ConvertDegAngleToAnimAngle(angleDeg)};
 		testDataList.Add(d);
-		//george.TurnTo(rot);
+		george.SetDestination(george.transform.position + george.transform.rotation * rot * Vector3.forward);
 		StopAllCoroutines();
 		StartCoroutine(TurnToEnded(d));
 	}
 	IEnumerator TurnToEnded(TestData d) {
 		yield return new WaitUntil(() => stoppedTurning);
 		stoppedTurning = false;
+		george.StopMoving();
 		d.actualRot = transform.rotation * Quaternion.Inverse(startRot);
 		d.posDelta = transform.position - startPos;
 		d.animActualTurn = george.ConvertDegAngleToAnimAngle(transform.rotation.eulerAngles.y) - george.ConvertDegAngleToAnimAngle(startRot.eulerAngles.y);

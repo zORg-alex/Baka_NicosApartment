@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/PlayerInput.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/PlayerInput.inputactions'
 
 using System;
 using System.Collections;
@@ -28,35 +28,35 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Fast"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""f1221884-3ddc-449e-9105-868941760fdc"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(behavior=1)""
                 },
                 {
                     ""name"": ""Careful"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""4ae841a6-cf7c-4749-8fa9-dffddb794c4c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(behavior=1)""
                 },
                 {
                     ""name"": ""Use"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""6b1c08d4-8e7e-4e81-9544-393a4db8e40e"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(behavior=1)""
                 },
                 {
                     ""name"": ""Jump"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""a7161fdb-9ffe-487f-88c4-443ca4ca108b"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(behavior=1)""
                 },
                 {
                     ""name"": ""ScreenPointer"",
@@ -72,7 +72,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""id"": ""30e58e82-0a2b-401a-9b09-057a30eb18bc"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(behavior=1)""
                 },
                 {
                     ""name"": ""Alternative"",
@@ -80,7 +80,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""id"": ""5ba2e466-e8c3-4f58-8d57-380b95c940e5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(behavior=1)""
                 },
                 {
                     ""name"": ""Back"",
@@ -88,7 +88,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""id"": ""6ba2d9e0-008e-4a06-96af-95b208de027d"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(behavior=1)""
                 }
             ],
             ""bindings"": [

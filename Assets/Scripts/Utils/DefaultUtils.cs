@@ -65,4 +65,6 @@ public static class DefaultUtils {
 	public static int Abs(this int v) => Math.Abs(v);
 	public static float Deg2Rad(this float v) => v * Mathf.Deg2Rad;
 	public static float Rad2Deg(this float v) => v * Mathf.Rad2Deg;
+
+	public static Quaternion Inverted(this Quaternion q) => Quaternion.Inverse(q);
 }

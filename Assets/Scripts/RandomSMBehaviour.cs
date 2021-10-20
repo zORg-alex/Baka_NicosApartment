@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class RandomSMBehaviour : StateMachineBehaviour
@@ -9,6 +10,8 @@ public class RandomSMBehaviour : StateMachineBehaviour
 	int RandomHash;
 	private System.Random rng;
 	public int currentLoopIndex = 0;
+	public string path;
+	private bool _initialized;
 
 	private void OnEnable() {
 		RandomHash = Animator.StringToHash("Random");
@@ -17,8 +20,13 @@ public class RandomSMBehaviour : StateMachineBehaviour
 
 	// OnStateEnter is called before OnStateEnter is called on any state inside this state machine
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+		if (!_initialized) Initialize(animator, stateInfo, layerIndex);
+	}
+
+	private void Initialize(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		SetRng(animator);
 		currentLoopIndex = 0;
+		_initialized = true;
 	}
 
 	private void SetRng(Animator animator) {
@@ -32,31 +40,4 @@ public class RandomSMBehaviour : StateMachineBehaviour
 			SetRng(animator);
 		}
 	}
-
-	// OnStateExit is called before OnStateExit is called on any state inside this state machine
-	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//	Debug.LogError("OnStateExit");
-	//}
-
-	// OnStateMove is called before OnStateMove is called on any state inside this state machine
-	//override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//	Debug.LogError("OnStateMove");
-	//}
-
-	// OnStateIK is called before OnStateIK is called on any state inside this state machine
-	//override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-	//{
-	//    
-	//}
-
-	// OnStateMachineEnter is called when entering a state machine via its Entry Node
-	//override public void OnStateMachineEnter(Animator animator, int stateMachinePathHash) {
-	//	SetRng(animator);
-	//	Debug.LogError("OnStateMachineEnter");
-	//}
-
-	// OnStateMachineExit is called when exiting a state machine via its Exit Node
-	//override public void OnStateMachineExit(Animator animator, int stateMachinePathHash) {
-	//	Debug.LogError("OnStateMachineExit");
-	//}
 }

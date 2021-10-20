@@ -28,10 +28,13 @@ namespace FIMSpace
             Leaning.TryAutoFindReferences(transform);
         }
 
-        private void Start()
-        {
-            Leaning.Initialize(this);
-        }
+        bool initialized;
+		private void OnEnable() {
+			if (!initialized) {
+                Leaning.Initialize(this);
+                initialized = true;
+			}
+		}
 
         private void Update()
         {
