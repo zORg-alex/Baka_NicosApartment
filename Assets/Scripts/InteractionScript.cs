@@ -64,7 +64,7 @@ public class InteractionScript : SerializedMonoBehaviour, IInteractable {
 		if (Selection.activeGameObject != transform.gameObject) return;
 
 		Gizmos.color = new Color(0, 1, 0, .3f);
-		Gizmos.DrawMesh(GizmoMeshEntry, transform.TransformPoint(InteractionEntryPointLocal), InteractionEntryRotation);
+		Gizmos.DrawMesh(GizmoMeshEntry, InteractionEntryPoint, InteractionEntryRotation);
 		Gizmos.color = new Color(1, 0, 0, .3f);
 		Gizmos.DrawLine(InteractionEntryPoint + (InteractionEntryRotation * Vector3.right) * .1f, InteractionEntryPoint);
 		Gizmos.color = new Color(0, 1, 0, .3f);

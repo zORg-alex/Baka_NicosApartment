@@ -19,29 +19,27 @@ public class Aud_Footsteps : MonoBehaviour {
 	public void Footstep (float strength) {
 		if (AudSrc == null) return;
 		RaycastHit hit;
-		ClipField[] curClip = Footsteps_wood;
+		ClipField[] Clips = Footsteps_wood;
 		if (Physics.Raycast(transform.position+Vector3.up,Vector3.down, out hit)){
-			//if (hit.transform.name == "Floor") curClip = Footsteps_wood;
-			if (hit.transform.name == "Carpet") curClip = Footsteps_carpet;
-			//zzz = hit.transform.tag;
+			if (hit.transform.tag == "Muffled") Clips = Footsteps_carpet;
 		}
-		if (curClip.Length == 0) return;
+		if (Clips.Length == 0) return;
 
-		int i = Random.Range(0,curClip.Length);
+		int i = Random.Range(0,Clips.Length);
 		//if (curClip[i].strength>strength) i = Random.Range(0,curClip.Length);
 
 		//if (strength > curClip[i].strength) 
-		float mult = strength/curClip[i].strength;
+		float mult = strength/Clips[i].strength;
 
 		if (strength <= 0) strength = 1f;
 		if (!AudSrc.isPlaying) {
-			if (curClip == Footsteps_carpet) {
+			if (Clips == Footsteps_carpet) {
 				AudSrc.volume = mult * MasterVolume * CarpetVolume;
 			}
 			else {
 				AudSrc.volume = mult * MasterVolume * WoodVolume;
 			}
-			AudSrc.clip = curClip[i].clip;
+			AudSrc.clip = Clips[i].clip;
 			AudSrc.Play();
 		}
 	}

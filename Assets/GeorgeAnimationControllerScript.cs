@@ -95,28 +95,84 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 
 	Animator anim;
 	#region Animator Properties indexed
-	int Sit;
-	int Walk;
-	int Speed;
-	int Turn;
-	int TurnAngle;
-	int Strafe;
-	int SitMirror;
+	int _sit;
+	int _walk;
+	int _speed;
+	int _turn;
+	int _turnAngle;
+	int _strafe;
+	int _sitMirror;
+	int _resetWalk;
 	#endregion
 
 	private void IndexAnimParameters() {
 		anim = GetComponent<Animator>();
-		Sit = Animator.StringToHash("Sit");
-		Walk = Animator.StringToHash("Walk");
-		Speed = Animator.StringToHash("Speed");
-		Turn = Animator.StringToHash("Turn");
-		TurnAngle = Animator.StringToHash("TurnAngle");
-		Strafe = Animator.StringToHash("Strafe");
-		SitMirror = Animator.StringToHash("SitMirror");
+		_sit = Animator.StringToHash("Sit");
+		_walk = Animator.StringToHash("Walk");
+		_speed = Animator.StringToHash("Speed");
+		_turn = Animator.StringToHash("Turn");
+		_turnAngle = Animator.StringToHash("TurnAngle");
+		_strafe = Animator.StringToHash("Strafe");
+		_sitMirror = Animator.StringToHash("SitMirror");
+		_resetWalk = Animator.StringToHash("ResetWalk");
+	}
+	private void TurnAngle(float turnAngle) {
+		_VHS_animValues.x = turnAngle;
+		anim.SetFloat(_turnAngle, turnAngle);
+	}
+	private void Speed(float speed) {
+		_VHS_animValues.y = speed;
+		agent.speed = speed;
+		anim.SetFloat(_speed, speed);
+	}
+	private void Walk(bool walk) {
+		_VHS_animValues.z = walk ? 1 : 0;
+		anim.SetBool(_walk, walk);
+	}
+	private void Strafe(float strafe) {
+		anim.SetFloat(_strafe, strafe);
+	}
+	void ResetWalk() {
+		anim?.SetTrigger(_resetWalk);
+	}
+
+	private bool stoppedTurning;
+	/// <summary>
+	/// Called on last frame in animation clip for turning on spot
+	/// So when we start turning on spot, we can start moving after full turn motion
+	/// <para/> Doing a simple culling for future calls on current frame with <see cref="stoppedTurning"/> bool.
+	/// </summary>
+	public void StopTurning() {
+		Debug.Log("StoppedTurning");
+		if (!stoppedTurning) {
+			stoppedTurning = true;
+			StartCoroutine(StopTurningTriggered());
+		}
+
+		IEnumerator StopTurningTriggered() {
+			yield return null;
+			stoppedTurning = false;
+		}
+	}
+	bool turnMidpoint;
+	/// <summary>
+	/// Called in the middle of turning animation to start movement
+	/// </summary>
+	public void TurnMidpoint() {
+		Debug.Log("TurnMidpoint");
+		if (!turnMidpoint) {
+			turnMidpoint = true;
+			StartCoroutine(TurnMidpointTriggered());
+		}
+		IEnumerator TurnMidpointTriggered() {
+			yield return null;
+			turnMidpoint = false;
+		}
 	}
 
 	private IInteractable currentInteractableTarget;
 	private void Clicked(InputAction.CallbackContext obj) {
+		Debug.Log($"Clicked, setting destination, currentInteractableTarget? {currentInteractableTarget != null}");
 		if (agent != null) {
 			var ray = Camera.main.ScreenPointToRay(input.Player.ScreenPointer.ReadVector2());
 			if (Physics.Raycast(ray, out var hit)) {
@@ -154,32 +210,65 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 	}
 	private IEnumerator _turnCR;
 	IEnumerator TurnCR(Quaternion rotation) {
+		Debug.Log($"TurnCR started {rotation}");
 		var turn = ConvertDegAngleToAnimAngle(rotation.eulerAngles.y);
 		var dist = Vector3.Distance(transform.position, agent.steeringTarget);
-		var wait = Time.time;
-		SetTurnAngle(turn);
-		if (dist < SlowTurnDistance90Deg * turn / Turn90Deg) {
-			//Stop to turn sharply
+		//Stop if close target & sharp turn
+		if (dist < SlowTurnDistance90Deg * turn.Abs() / Turn90Deg) {
+			Debug.Log($"TurnCR dist:{dist} < {SlowTurnDistance90Deg * turn / Turn90Deg} slowdown, before close target & sharp turn");
 			TweenSpeedToFor(0f, StopToWalkTime);
-			wait = Time.time + StopToWalkTime;
-			yield return null;
-			anim.MatchTarget(Vector3.zero, rotation, AvatarTarget.Root, new MatchTargetWeightMask(Vector3.zero, 1), 0, 1, false);
+			//wait = Time.time + StopToWalkTime;
+			yield return new WaitForSeconds(StopToWalkTime);
 		}
-		yield return new WaitUntil(() => stoppedTurning);
-		SetTurnAngle(0f);
+		ResetWalk();
+		TurnAngle(turn);
+		yield return null;
+		var curTime = anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
+		//anim.MatchTarget(Vector3.zero, rotation, AvatarTarget.Root, new MatchTargetWeightMask(Vector3.zero, 1), curTime , .999f, true);
+		if (!stoppedTurning || !turnMidpoint)
+			yield return new WaitUntil(() => stoppedTurning || turnMidpoint);
+		Debug.Log($"TurnCR stopped rotating, TurnAngle = 0, Speed => 0");
 		TweenSpeedToFor(WalkSpeed, StopToWalkTime);
+		if (!stoppedTurning)
+			yield return new WaitUntil(() => stoppedTurning);
+		TurnAngle(0f);
 		//correct course if necessary
+		Debug.Log($"TurnCR start correcting course");
 		while (!agentAtDestination) {
 			turn = GetTurnVal();
 			if (turn.Abs() > maxSlightTurn) {
 				var animTime = anim.GetCurrentAnimatorClipInfo(0).FirstOrDefault().clip?.averageDuration ?? 0f;
-				SetTurnAngle(turn);
+				TurnAngle(turn);
 				yield return new WaitForSeconds(animTime);
-			} else
+			} else {
+				TurnAngle(0);
 				yield return null;
+			}
 		}
+		//SetTurnAngle(0f);
 		_turnCR = null;
 	}
+
+	private void TurnTo(Quaternion rotation, Action continueWith = null) {
+		Debug.Log($"TurnTo: rotation:{rotation}, continueWith:{continueWith != null}");
+		if (_curTurnToCR != null) StopCoroutine(_curTurnToCR);
+		_curTurnToCR = TurnToCR(rotation, continueWith);
+		StartCoroutine(_curTurnToCR);
+
+		IEnumerator TurnToCR(Quaternion rotation, Action continueWith = null) {
+			var turn = ConvertDegAngleToAnimAngle((rotation * transform.rotation.Inverted()).eulerAngles.y);
+			var walk = anim.GetBool(_walk);
+			if (!walk) Walk(true);
+			TurnAngle(turn);
+			yield return new WaitUntil(() => stoppedTurning);
+			Debug.Log($"TurnTo: stoppedTurning, walk => false");
+			if (!walk) Walk(false);
+			continueWith?.Invoke();
+
+			_curTurnToCR = null;
+		}
+	}
+	IEnumerator _curTurnToCR;
 
 	private float GetTurnVal() {
 		var direction = transform.InverseTransformPoint(agent.steeringTarget.Horizontal()).normalized;
@@ -194,18 +283,6 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 		return (ang < 180 ? ang : -360 + ang) / (90 / Turn90Deg);
 	}
 
-	/// <summary>
-	/// Called on last frame in animation clip for turning on spot
-	/// So when we start turning on spot, we can start moving after full turn motion
-	/// <para/> Doing a simple culling for future calls on current frame with <see cref="stoppedTurning"/> bool.
-	/// </summary>
-	public void StopTurning() => StartCoroutine(StopTurningTriggered());
-	private bool stoppedTurning;
-	public IEnumerator StopTurningTriggered() {
-		stoppedTurning = true;
-		yield return null;
-		stoppedTurning = false;
-	}
 	public void StopMoving() {
 		agent.destination = transform.position;
 		agent.isStopped = true;
@@ -237,106 +314,93 @@ public class GeorgeAnimationControllerScript : MonoBehaviour {
 #endif
 		//Steering target changed or
 		if (isMoving && lastSteeringTarget != agent.steeringTarget) {
-			SetWalk(true);
+			Debug.Log($"Update: SteeringTarget changed, walk = true, StartTurn, next corner is sharp {_nextCornerIsSharp}");
+			Walk(true);
 			StartTurn();
 			_nextCornerIsSharp = NextCornerIsSharp();
 		}
 		//Course correction is done in TurnCR
-		if (isMoving && agentAtDestination) {
+		if (isMoving && agentAtDestination && _curTurnToCR == null) {
+			Debug.Log($"Update: isMoving && agentAtDestination => stop moving");
 			isMoving = false;
-			SetTurnAngle(0f);
-			SetStrafe(0f);
+			TurnAngle(0f);
+			Strafe(0f);
 			if (_curSlowDownToByProximityCR != null) {
 				StopCoroutine(_curSlowDownToByProximityCR);
 				_curSlowDownToByProximityCR = null;
 			}
 			var t = TweenSpeedToFor(0f, StopToWalkTime);
 			t.setOnComplete(() => {
-				SetWalk(false);
-				stoppedMovement = true;
+				if (agentAtDestination) {
+					Walk(false);
+					stoppedMovement = true;
+				}
 			});
 		}
-		if (stoppedMovement) {
+		if (stoppedMovement && _curTurnToCR == null) {
+			Debug.Log($"Update: after stopped moving, turn to interactive {currentInteractableTarget != null}");
 			stoppedMovement = false;
 			if (currentInteractableTarget != null) {
-				TurnTo(currentInteractableTarget.InteractionEntryRotation, () => EnterInteraction());
+				TurnTo(currentInteractableTarget.InteractionEntryRotation, () => StartCoroutine(EnterInteractionCR()));
 			}
 		}
 		if (isMoving && _curSlowDownToByProximityCR == null &&
 			transform.position.DistanceTo(agent.steeringTarget) < SharpTurnSlowDownDistance) {
-			StartSlowDownToByProximity(agent.path.corners.Length == 1 ? 0 : SlowWalkSpeed);
+			Debug.Log($"Update: slow down by proximity");
+			SlowDownToByProximity(agent.path.corners.Length == 1 ? 0 : SlowWalkSpeed);
 		}
 
+		transform.position = transform.position.SetY(Physics.RaycastAll(new Ray(transform.position + Vector3.up, Vector3.down), 3, 64)?.Max(h=>h.point.y) ?? 0f);
 		agent.nextPosition = transform.position;
 		lastSteeringTarget = agent.steeringTarget;
 	}
-	private void TurnTo(Quaternion rotation, Action continueWith = null) {
-		if (_curTurnToCR != null) StopCoroutine(_curTurnToCR);
-		_curTurnToCR = TurnToCR(rotation, continueWith);
-		StartCoroutine(_curTurnToCR);
-	}
-	IEnumerator _curTurnToCR;
-	private IEnumerator TurnToCR(Quaternion rotation, Action continueWith = null) {
-		var turn = ConvertDegAngleToAnimAngle((rotation * transform.rotation.Inverted()).eulerAngles.y);
-		var walk = anim.GetBool(Walk);
-		if (!walk) SetWalk(true);
-		SetTurnAngle(turn);
-		yield return new WaitUntil(() => stoppedTurning);
-		if (!walk) SetWalk(false);
-		continueWith?.Invoke();
-	}
 
 	private LTDescr TweenSpeedToFor(float speed, float time) {
-		return LeanTween.value(gameObject, val => SetSpeed(val), anim.GetFloat(Speed), speed, time);
+		return LeanTween.value(gameObject, val => Speed(val), anim.GetFloat(_speed), speed, time);
 	}
 
-	IEnumerator EnterInteraction() {
-		currentInteractableTarget.ApplyFor(anim, AnimationProperty.Time.EnterBegin);
-		yield return null;
-		if (currentInteractableTarget != null)
-			anim.MatchTarget(currentInteractableTarget.InteractionEndPoint, currentInteractableTarget.InteractionEndRotation, AvatarTarget.Root, new MatchTargetWeightMask(Vector3.one, 1f), 0f, 1f, false);
+	IEnumerator EnterInteractionCR() {
+		if (currentInteractableTarget != null) {
+			currentInteractableTarget.ApplyFor(anim, AnimationProperty.Time.EnterBegin);
+			yield return new WaitUntil(() => startMatchTarget);
+			if (currentInteractableTarget != null)
+				anim.MatchTarget(currentInteractableTarget.InteractionEndPoint, currentInteractableTarget.InteractionEndRotation, AvatarTarget.Root, new MatchTargetWeightMask(Vector3.one, 1f), 0f, 1f);
+		}
+	}
+	private bool startMatchTarget;
+	private void StartMatchTarget() {
+		if (startMatchTarget) return;
+		startMatchTarget = true;
+		StartCoroutine(StartMatchTargetCR());
+		IEnumerator StartMatchTargetCR() {
+			yield return null;
+			startMatchTarget = false;
+		}
 	}
 
-
-	private void StartSlowDownToByProximity(float slowDownSpeed) {
+	private void SlowDownToByProximity(float slowDownSpeed) {
+		Debug.Log($"SlowDownToByProximity: to {slowDownSpeed}");
 		if (_curSlowDownToByProximityCR != null)
 			StopCoroutine(_curSlowDownToByProximityCR);
-		_curSlowDownToByProximityCR = SlowDownToByProximity(slowDownSpeed);
+		_curSlowDownToByProximityCR = SlowDownToByProximityCR(slowDownSpeed);
 		StartCoroutine(_curSlowDownToByProximityCR);
+
+		IEnumerator SlowDownToByProximityCR(float slowDownSpeed) {
+			var exit = false;
+			var corner = agent.steeringTarget;
+			//anim.MatchTarget(currentInteractableTarget?.InteractionEntryPoint ?? agent.steeringTarget,
+			//	currentInteractableTarget?.InteractionEndRotation ?? Quaternion.identity,
+			//	AvatarTarget.Root, new MatchTargetWeightMask(Vector3.one, currentInteractableTarget != null ? 1 : 0), 0f, 1f, false);
+			while (!exit) {
+				var proximity = ProximityToSharpCornerOrEnd();
+				Speed(anim.GetFloat(_speed).LerpTo(slowDownSpeed, proximity));
+				exit = agentAtDestination || corner != agent.steeringTarget;
+				yield return null;
+			}
+			_curSlowDownToByProximityCR = null;
+		}
 	}
 	IEnumerator _curSlowDownToByProximityCR;
-	IEnumerator SlowDownToByProximity(float slowDownSpeed) {
-		Debug.Log($"Slowing down, agent.steeringTarget == agent.destination, speed => {slowDownSpeed}");
-		var exit = false;
-		var corner = agent.steeringTarget;
-		//anim.MatchTarget(currentInteractableTarget?.InteractionEntryPoint ?? agent.steeringTarget,
-		//	currentInteractableTarget?.InteractionEndRotation ?? Quaternion.identity,
-		//	AvatarTarget.Root, new MatchTargetWeightMask(Vector3.one, currentInteractableTarget != null ? 1 : 0), 0f, 1f, false);
-		while (!exit) {
-			var proximity = ProximityToSharpCornerOrEnd();
-			SetSpeed(anim.GetFloat(Speed).LerpTo(slowDownSpeed, proximity));
-			exit = agentAtDestination || corner != agent.steeringTarget;
-			yield return null;
-		}
-		_curSlowDownToByProximityCR = null;
-	}
-
-	private void SetTurnAngle(float turnAngle) {
-		_VHS_animValues.x = turnAngle;
-		anim.SetFloat(TurnAngle, turnAngle);
-	}
-	private void SetSpeed(float speed) {
-		_VHS_animValues.y = speed;
-		agent.speed = speed;
-		anim.SetFloat(Speed, speed);
-	}
-	private void SetWalk(bool walk) {
-		_VHS_animValues.z = walk ? 1 : 0;
-		anim.SetBool(Walk, walk);
-	}
-	private void SetStrafe(float strafe) {
-		anim.SetFloat(Strafe, strafe);
-	}
 
 	/* 
 	 * ========================================================================================================

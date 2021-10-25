@@ -28,9 +28,11 @@ namespace FIMSpace
             Leaning.TryAutoFindReferences(transform);
         }
 
-        bool initialized;
+        [NonSerialized]
+        bool initialized = false;
 		private void OnEnable() {
 			if (!initialized) {
+                Reset(); 
                 Leaning.Initialize(this);
                 initialized = true;
 			}

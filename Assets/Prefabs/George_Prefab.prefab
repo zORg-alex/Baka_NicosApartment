@@ -837,18 +837,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe3c6f7bd167e54588de959c5d1edab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turn90Deg: 1.5
+  Turn90Deg: 1.5
   SharpTurn: 1.5
   maxSlightTurn: 0.5
   WalkSpeed: 1.5
   SharpTurnSlowDownDistance: 0.5
   SlowWalkSpeed: 0.7
-  destination: {x: 0, y: 0, z: 0}
+  StopToWalkTime: 0.3
+  SlowTurnDistance90Deg: 1.5
   agent: {fileID: 1968228886123800858}
-  agentIsMoving: 1
-  isTurning: 0
-  NextCornerIsSharp: 0
-  turnTIme: 0.5
+  destination: {x: 0, y: 0, z: 0}
+  isMoving: 0
+  _nextCornerIsSharp: 0
   _VHS_animValues: {x: 0, y: 0, z: 0}
 --- !u!114 &1968228886123800906
 MonoBehaviour:
@@ -874,12 +874,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698389702272308322}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 163d2c8446aa6ae42a718abaa805b8f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _EditorDrawSetup: 1
+  _EditorDrawSetup: 0
   Leaning:
     UpdateMode: 0
     Calibrate: 1
@@ -2701,9 +2701,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5604009538358712375}
-  m_LocalRotation: {x: -0.38846558, y: 0.6091469, z: -0.65528256, w: -0.22054338}
+  m_LocalRotation: {x: -0.3884662, y: 0.6091471, z: -0.6552822, w: -0.22054294}
   m_LocalPosition: {x: -0.031797588, y: 0.1350283, z: 0.11822297}
-  m_LocalScale: {x: 0.99999994, y: 0.95926815, z: 1.0000001}
+  m_LocalScale: {x: 0.99999994, y: 0.9592681, z: 1.0000001}
   m_Children:
   - {fileID: 9047738578901375483}
   m_Father: {fileID: 417207659704619116}

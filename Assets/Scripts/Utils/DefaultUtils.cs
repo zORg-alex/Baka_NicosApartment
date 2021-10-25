@@ -55,6 +55,7 @@ public static class DefaultUtils {
 	/// Returns new vector with y = 0
 	/// </summary>
 	public static Vector3 Horizontal(this Vector3 v) => new Vector3(v.x, 0, v.z);
+	public static Vector3 SetY(this Vector3 v, float y) => new Vector3(v.x, y, v.z);
 
 	public static float DistanceTo(this Vector3 vector1, Vector3 vector2) =>
 		Vector3.Distance(vector1, vector2);
