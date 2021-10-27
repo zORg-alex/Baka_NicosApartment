@@ -22,10 +22,13 @@ public class RotateSun : MonoBehaviour
 	bool isRotating;
 
 
-	private void Awake() {
+	private void OnEnable() {
         action.Enable();
 		action.performed += Action_performed;
 		Axis = Axis.normalized;
+	}
+	private void OnDisable() {
+		action.Disable();
 	}
 
 	[Button("Rotate")]

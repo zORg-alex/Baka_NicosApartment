@@ -2485,7 +2485,6 @@ GameObject:
   m_Component:
   - component: {fileID: 355929203}
   - component: {fileID: 355929206}
-  - component: {fileID: 355929204}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -2507,33 +2506,6 @@ Transform:
   m_Father: {fileID: 963194228}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &355929204
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355929202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 0, z: 0.53}
-  m_LookaheadTime: 0
-  m_LookaheadSmoothing: 0
-  m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0.5
-  m_VerticalDamping: 0.5
-  m_ScreenX: 0.5
-  m_ScreenY: 0.5
-  m_DeadZoneWidth: 0.5
-  m_DeadZoneHeight: 0.5
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
-  m_BiasX: 0
-  m_BiasY: 0
-  m_CenterOnActivate: 1
 --- !u!114 &355929206
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -9294,18 +9266,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a200b19ca1a9685429ed7e043c28e904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Resolution: 5
+  m_Resolution: 8
   m_Appearance:
     pathColor: {r: 1, g: 0.9167996, b: 0, a: 1}
     inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     width: 0.2
   m_Looped: 0
   m_Waypoints:
-  - position: {x: -4.666509, y: 0, z: 0.62831444}
+  - position: {x: -4.962107, y: 0, z: 1.8314562}
     roll: 0
-  - position: {x: -4.622972, y: 0, z: -0.7501268}
+  - position: {x: -4.501149, y: 0, z: 0.5103859}
     roll: 0
-  - position: {x: -4.091396, y: 0, z: -1.9330378}
+  - position: {x: -3.6722748, y: 0, z: -0.80562663}
     roll: 0
 --- !u!4 &439308991
 Transform:
@@ -10538,6 +10510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 922162838}
   - component: {fileID: 922162837}
+  - component: {fileID: 922162839}
   m_Layer: 0
   m_Name: DollyCart1
   m_TagString: Untagged
@@ -10559,9 +10532,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Path: {fileID: 439308990}
   m_UpdateMethod: 0
-  m_PositionUnits: 1
+  m_PositionUnits: 2
   m_Speed: 0
-  m_Position: 0
+  m_Position: 1
 --- !u!4 &922162838
 Transform:
   m_ObjectHideFlags: 0
@@ -10569,14 +10542,30 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922162836}
-  m_LocalRotation: {x: 0, y: 0.999623, z: 0, w: -0.027457824}
-  m_LocalPosition: {x: -4.666509, y: 0, z: 0.62831444}
+  m_LocalRotation: {x: 0, y: 0.95369726, z: 0, w: 0.30076835}
+  m_LocalPosition: {x: -3.6722748, y: 0, z: -0.80562663}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &922162839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922162836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d9aa4e913a8174b81170f009c7ce97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cart: {fileID: 922162837}
+  cam: {fileID: 0}
+  invisibleWalls:
+  - {fileID: 580694583}
 --- !u!43 &930930436
 Mesh:
   m_ObjectHideFlags: 0
@@ -10903,14 +10892,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.014050088, y: -0.7209563, z: -0.014623555, w: 0.6926838}
-  m_LocalPosition: {x: 1.5004699, y: 1.319, z: 0.06002717}
-  m_LocalScale: {x: 1.3810952, y: 1.3810956, z: 1.3810958}
+  m_LocalRotation: {x: -0, y: -0.7071088, z: -0, w: 0.7071048}
+  m_LocalPosition: {x: 2.4003692, y: 1.5, z: -0.000004053116}
+  m_LocalScale: {x: 1.3810953, y: 1.3810956, z: 1.3810959}
   m_Children:
   - {fileID: 355929203}
   m_Father: {fileID: 922162838}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 5.39, y: 61.62, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11000,7 +10989,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6624, y: 1}
+    m_SensorSize: {x: 1.4847512, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11036,7 +11025,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
+  m_CustomBlends: {fileID: 11400000, guid: c9c65d7a7f3be354f94cbac86e986ab4, type: 2}
   m_CameraCutEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -11059,7 +11048,7 @@ MonoBehaviour:
   m_FocusTracking: 0
   m_FocusTarget: {fileID: 0}
   m_FocusOffset: 0
-  m_Profile: {fileID: 0}
+  m_Profile: {fileID: 11400000, guid: be0b2fa1bce6afe4c8deaa9e18ec147d, type: 2}
 --- !u!43 &1003428977
 Mesh:
   m_ObjectHideFlags: 0
@@ -12358,11 +12347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642770161536958, guid: 66a5813adb6fb0d4a84f07ef6ffcb54f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.16915785
+      value: 0.16915789
       objectReference: {fileID: 0}
     - target: {fileID: 8549642770161536958, guid: 66a5813adb6fb0d4a84f07ef6ffcb54f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.4471712
+      value: 0.44717118
       objectReference: {fileID: 0}
     - target: {fileID: 8549642770161536958, guid: 66a5813adb6fb0d4a84f07ef6ffcb54f, type: 3}
       propertyPath: m_LocalRotation.y

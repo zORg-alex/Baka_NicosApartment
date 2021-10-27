@@ -47,6 +47,7 @@ namespace ZorgsCompoundColliders {
 			zColliderChanged();
 
 			pathEditorHash = this.GetHashCode();
+			hideFlags = HideFlags.HideAndDontSave;
 		}
 
 		internal void zColliderChanged() {

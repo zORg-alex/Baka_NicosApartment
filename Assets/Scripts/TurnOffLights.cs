@@ -7,7 +7,7 @@ public class TurnOffLights : MonoBehaviour
 {
     public InputAction action;
     public List<Light> lights;
-    void Awake()
+    void OnEnable()
     {
         action.Enable();
 		action.performed += Action_performed;

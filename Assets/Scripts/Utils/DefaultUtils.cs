@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public static class DefaultUtils {
@@ -68,4 +70,13 @@ public static class DefaultUtils {
 	public static float Rad2Deg(this float v) => v * Mathf.Rad2Deg;
 
 	public static Quaternion Inverted(this Quaternion q) => Quaternion.Inverse(q);
+
+	public static IEnumerable<T> Foreach<T>(this IEnumerable<T> collection, Action<T> action) {
+		foreach (var item in collection) {
+			action(item);
+		}
+		return collection;
+	}
+
+	public static Vector3 Scale_(this Vector3 v1, Vector3 v2) => new Vector3(v1.x * v2.x, v1.y * v2.y, v1.z * v2.z);
 }
